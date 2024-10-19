@@ -1,9 +1,9 @@
-import Topbar from "./components/Header/Topbar";
+import Header from "./components/Header/Header";
 
 export default function App() {
   return (
     <>
-      <Topbar/>  
+    <Header/>
     </>
   )
 }

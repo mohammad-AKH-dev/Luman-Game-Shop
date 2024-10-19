@@ -2,3 +2,13 @@
     font-family: 'Yekan-Regular';
     src: url('./assets/fonts/IRANYekanRegular.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Rokh-Regular';
+    src: url('./assets/fonts/RokhFaNum-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Rokh-Bold';
+    src: url('./assets//fonts/RokhFaNum-Bold.ttf') format('truetype');
+}

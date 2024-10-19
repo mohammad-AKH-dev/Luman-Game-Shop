@@ -1,3 +1,5 @@
+import { purple } from '@mui/material/colors';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   important: true ,
@@ -7,14 +9,26 @@ export default {
   ],
   theme: {
     fontFamily:{
-      primary: ['Yekan-Regular']
+      primary: ['Yekan-Regular'],
+      secondary: ['Rokh-Regular'],
+      secondaryBold: ['Rokh-Bold']
     },
     extend: {
       container:{
         center:true,
+        padding:{
+          padding:'1rem',
+          'xs': '1rem'
+        }
         
       },
+      boxShadow:{
+        box: '1px 1px 10px #9b51e0',
+        boxHover: '1px 2px 13px #9547edb3'
+      },
       screens: {
+        'xs': '576px',
+
         'sm': '870px',
         // => @media (min-width: 640px) { ... }
   
@@ -34,7 +48,10 @@ export default {
         'primary': '#070e1c',
         'secondary': '#151B2D',
         'purple': '#a04cff',
-        'pink': '#FF6BBB'
+        'pink': '#FF6BBB',
+      },
+      backgroundImage:{
+        box: 'linear-gradient(90deg, rgba(160,76,255,1) 0%, rgba(86,103,255,1) 50%, rgba(255,107,187,1) 100%)'
       },
       placeholderColor: '#777'
     },
