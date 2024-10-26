@@ -1,5 +1,3 @@
-import { purple } from '@mui/material/colors';
-
 /** @type {import('tailwindcss').Config} */
 export default {
   important: true ,
@@ -16,10 +14,7 @@ export default {
     extend: {
       container:{
         center:true,
-        padding:{
-          padding:'1rem',
-          'xs': '1rem'
-        }
+        padding:'1rem'
         
       },
       boxShadow:{
@@ -28,6 +23,8 @@ export default {
       },
       screens: {
         'xs': '576px',
+
+        'xs2': '768px',
 
         'sm': '870px',
         // => @media (min-width: 640px) { ... }
@@ -49,6 +46,7 @@ export default {
         'secondary': '#151B2D',
         'purple': '#a04cff',
         'pink': '#FF6BBB',
+        'ffffff': '#ffffff'
       },
       backgroundImage:{
         box: 'linear-gradient(90deg, rgba(160,76,255,1) 0%, rgba(86,103,255,1) 50%, rgba(255,107,187,1) 100%)'

@@ -5,8 +5,8 @@ import LandingBox from "../Box/LandingBox";
 export default function Landing() {
   return (
     <div className="Landing bg-primary">
-      <div className="flex justify-between container flex-col lg:flex-row">
-        <div className="w-full lg:w-[50%] font-secondary flex flex-col justify-center items-center xs:block Landing-right__section pt-[3rem] lg:pt-[7rem] xl:pt-[11rem] relative">
+      <div className="flex justify-between container flex-col lg:flex-row pt-4">
+        <div className="w-full lg:w-[50%] font-secondary flex flex-col justify-center items-center xs:block Landing-right__section pt-[3rem] lg:pt-[7rem] xl:pt-[3rem] relative">
           <h3 className="Landing-subtitle text-[20px] lg:text-4xl text-[#FFFFFFED]">
             با لومان گیم خاص‌ترین
           </h3>
@@ -35,7 +35,7 @@ export default function Landing() {
               <KeyboardBackspaceIcon className="pr-2 group-hover:translate-x-[-7px] delay-100 transition-all text-3xl" />
             </div>
           </div>
-          <div className="Landing-boxes font-primary flex flex-wrap sm:flex-nowrap items-center lg:justify-start flex-col xs:flex-row gap-[2rem] md:gap-44 mt-[3rem] sm:mt-[5rem]  md:mt-8 xl:mt-24 lg:gap-4 xl:gap-8">
+          <div className="Landing-boxes font-primary flex flex-wrap sm:flex-nowrap items-center lg:justify-start flex-col xs:flex-row gap-[2rem] md:gap-44 mt-[3rem] sm:mt-[5rem]  md:mt-8 xl:mt-[13rem] lg:gap-4 xl:gap-8">
             <LandingBox
               src={
                 "https://theme.fullwp.ir/luman/game/wp-content/uploads/elementor/thumbs/1-1-qa8mzvpool0pltocd12ck38gzz1eklzgkzfn1lei2c.png"
@@ -61,7 +61,7 @@ export default function Landing() {
               className="w-full"
             />
           </div>
-          <div className='arrow-img__wrapper w-[194px] h-[193px] lg:hidden hidden sm:block sm:absolute top-[15rem] left-[-5rem] sm:left-[4rem] sm:top-[9rem] rotate-[264deg]'>
+          <div className='arrow-img__wrapper w-[194px] h-[193px] lg:hidden hidden sm:block sm:absolute top-[15rem] left-[-5rem] sm:left-[1rem] sm:top-[8rem] rotate-[264deg]'>
              <img src="images/arrow-slider2.svg" alt="" />
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function Landing() {
               src="images/Landing-img-bg.png"
             />
             <div className="Landing-img__title">
-              <p className="Landing-img__sub text-[42px] lg:text-7xl font-secondaryBold text-center xs:mr-16">
+              <p className="Landing-img__sub text-[42px] lg:text-6xl font-secondaryBold text-center xs:mr-16">
                 خرید CP کالاف
               </p>
             </div>

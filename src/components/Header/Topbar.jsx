@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 export default function Topbar() {
   return (
-    <div className="Topbar bg-primary p-2 lg:p-5">
+    <div className="Topbar bg-primary lg:p-5">
       <div className="Topbar-wrapper container flex items-center justify-between">
         <div className="block lg:hidden">
          <MenuIcon className="cursor-pointer"/>
