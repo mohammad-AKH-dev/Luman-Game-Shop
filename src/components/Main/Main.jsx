@@ -1,12 +1,12 @@
-import SectionHeader from "../sectionHeader/SectionHeader";
 import MostSoldGames from "./MostSoldGames";
+import PlayStationGamesSlider from "./PlayStationGamesSlider";
 
 export default function Main() {
   return (
     <main className="bg-primary">
        <div className="container">
-       <SectionHeader title={'پر فروش ترین ها'}/>
        <MostSoldGames/>
+       <PlayStationGamesSlider/>
        </div>
     </main>
   )

@@ -1,6 +1,7 @@
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import { Link } from "react-router-dom";
 
+
 export default function MostSoledGameBox({ price, discount }) {
   return (
     <div className="w-full max-h-[128px] flex items-center lg:bg-secondary rounded-r-md rounded-l-2xl overflow-hidden">
