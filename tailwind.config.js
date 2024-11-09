@@ -22,7 +22,7 @@ export default {
         boxHover: '1px 2px 13px #9547edb3'
       },
       screens: {
-        'xs': '576px',
+        'xs': '678px',
 
         'xs2': '768px',
 
@@ -49,7 +49,8 @@ export default {
         'ffffff': '#ffffff'
       },
       backgroundImage:{
-        box: 'linear-gradient(90deg, rgba(160,76,255,1) 0%, rgba(86,103,255,1) 50%, rgba(255,107,187,1) 100%)'
+        box: 'linear-gradient(90deg, rgba(160,76,255,1) 0%, rgba(86,103,255,1) 50%, rgba(255,107,187,1) 100%)',
+        category: 'url(/images/categories-bg.jpg)'
       },
       placeholderColor: '#777'
     },

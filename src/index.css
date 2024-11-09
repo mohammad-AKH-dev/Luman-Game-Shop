@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+@layer utilities {
+    .swiper {
+        margin-top: 2.5rem;
+        padding-bottom: 3rem;
+    }
+}
 
 body{
     box-sizing: border-box !important;
@@ -17,4 +23,8 @@ body{
 
 ul,li{
     list-style: none;
+}
+
+.swiper-pagination-bullet-active{
+    background: #a04cff !important;
 }
