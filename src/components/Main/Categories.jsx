@@ -11,6 +11,7 @@ export default function Categories() {
       <div className="container">
         <SectionHeader title={"دسته بندی ها"} />
         <Swiper
+          className="mt-12"
           modules={[Autoplay]}
           spaceBetween={0}
           loop
@@ -30,8 +31,6 @@ export default function Categories() {
             }
           }}
           grabCursor
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide className="max-w-[173px]">
             <CategoryBox title={"ویندوز"} subtitle={"Windows"} />

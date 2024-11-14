@@ -60,7 +60,7 @@ export default function PlayStationGamesSlider() {
         </div>
         <SectionHeader title={"اکانت قانونی پلی استیشن"} />
         <Swiper
-          className="playstation-Games__wrapper"
+          className="playstation-Games__wrapper mt-12"
           modules={[Autoplay, Pagination]}
           grabCursor
           autoplay={{
@@ -88,26 +88,24 @@ export default function PlayStationGamesSlider() {
             clickable: true,
           }}
           loop
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide className="lg:w-[25%]">
-            <GameBox title={"اسپایدرمن"} price={50000} discount={70000} />
+            <GameBox title={"اسپایدرمن"} price={70000} discount={50000} />
           </SwiperSlide>
           <SwiperSlide className="lg:w-[25%]">
-            <GameBox title={"اسپایدرمن"} price={50000} discount={70000} />
+            <GameBox title={"اسپایدرمن"} price={70000} discount={50000} />
           </SwiperSlide>
           <SwiperSlide className="lg:w-[25%]">
-            <GameBox title={"اسپایدرمن"} price={50000} discount={70000} />
+            <GameBox title={"اسپایدرمن"} price={70000}/>
           </SwiperSlide>
           <SwiperSlide className="lg:w-[25%]">
-            <GameBox title={"اسپایدرمن"} price={50000} discount={70000} />
+            <GameBox title={"اسپایدرمن"} price={70000} discount={50000} />
           </SwiperSlide>
           <SwiperSlide className="lg:w-[25%]">
-            <GameBox title={"اسپایدرمن"} price={50000} discount={70000} />
+            <GameBox title={"اسپایدرمن"} price={70000} discount={50000} />
           </SwiperSlide>
           <SwiperSlide className="lg:w-[25%]">
-            <GameBox title={"اسپایدرمن"} price={50000} discount={70000} />
+            <GameBox title={"اسپایدرمن"} price={70000} discount={50000} />
           </SwiperSlide>
         </Swiper>
       </div>
