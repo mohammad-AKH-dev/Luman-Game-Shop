@@ -9,7 +9,8 @@ import "swiper/css/pagination";
 
 export default function PlayStationGamesSlider() {
   return (
-    <div className="container">
+    <section className="playstation-games-section">
+       <div className="container">
       <div className="playstation-Games mt-40 relative">
         <div className="playstation-Games__bg-circle max-w-[400px] max-h-[400px] top-[-8rem] right-[5rem] md:max-w-[450px] md:max-h-[450px] lg:max-w-[500px] lg:max-h-[500px] xl:max-w-[669px] xl:max-h-[669px] absolute md:top-[-13rem] md:right-[2rem] lg:top-[-10rem] lg:right-0 xl:top-[-16rem] xl:right-[-4rem]">
           <svg
@@ -110,5 +111,6 @@ export default function PlayStationGamesSlider() {
         </Swiper>
       </div>
     </div>
+    </section>
   );
 }

@@ -1,7 +1,9 @@
+import Advertising from "./Advertising";
 import Categories from "./Categories";
 import Discount from "./Discount";
 import MostSoldGames from "./MostSoldGames";
 import PlayStationGamesSlider from "./PlayStationGamesSlider";
+import PremiuemAccounts from "./PremiuemAccounts";
 
 export default function Main() {
   return (
@@ -11,6 +13,8 @@ export default function Main() {
        <PlayStationGamesSlider/>
        <Categories/>
        <Discount/>
+       <PremiuemAccounts/>
+       <Advertising/>
     </main>
   )
 }

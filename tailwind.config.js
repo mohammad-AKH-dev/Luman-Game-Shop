@@ -50,9 +50,13 @@ export default {
       },
       backgroundImage:{
         box: 'linear-gradient(90deg, rgba(160,76,255,1) 0%, rgba(86,103,255,1) 50%, rgba(255,107,187,1) 100%)',
-        category: 'url(/images/categories-bg.jpg)'
+        category: 'url(/images/categories-bg.jpg)',
+        advertising: 'url(/images/pubg-bg-luman-theme.jpg)'
       },
-      placeholderColor: '#777'
+      placeholderColor: '#777',
+      backgroundPosition:{
+        'right-center': '84%'
+      }
     },
   },
   plugins: [],
