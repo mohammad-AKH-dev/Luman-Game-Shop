@@ -58,6 +58,7 @@ export default function PremiuemAccounts() {
         <Swiper
           spaceBetween={30}
           modules={[Autoplay, Pagination]}
+          autoplay
           slidesPerView={1}
           breakpoints={{
             576: {

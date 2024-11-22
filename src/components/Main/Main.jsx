@@ -8,7 +8,7 @@ import PremiuemAccounts from "./PremiuemAccounts";
 
 export default function Main() {
   return (
-    <main className="bg-primary">
+    <main className="main bg-primary">
       
        <MostSoldGames/>
        <PlayStationGamesSlider/>

@@ -10,7 +10,7 @@ export default function ArticleBox(href) {
           className="w-full rounded-md"
         />
         <div className="Article-box__infos mt-4 text-center">
-          <h3 className="Article-box__title">
+          <h3 className="Article-box__title text-right">
             <Link to={href} className="text-[#ffffff] font-bold text-[22px]">اخبار تولد 6 سالگی فری فایر</Link>
           </h3>
           <div className="Article-Diffusion-date-infos flex justify-between mt-4">

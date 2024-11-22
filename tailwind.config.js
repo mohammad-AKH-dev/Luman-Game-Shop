@@ -23,7 +23,7 @@ export default {
       },
       screens: {
         'sm1': '576px',
-        
+
         'xs': '678px',
 
         'xs2': '768px',
@@ -53,7 +53,8 @@ export default {
       backgroundImage:{
         box: 'linear-gradient(90deg, rgba(160,76,255,1) 0%, rgba(86,103,255,1) 50%, rgba(255,107,187,1) 100%)',
         category: 'url(/images/categories-bg.jpg)',
-        advertising: 'url(/images/pubg-bg-luman-theme.jpg)'
+        advertising: 'url(/images/pubg-bg-luman-theme.jpg)',
+        footer:'linear-gradient(90deg, #5667FF 0%, #A04CFF 100%)'
       },
       placeholderColor: '#777',
       backgroundPosition:{
