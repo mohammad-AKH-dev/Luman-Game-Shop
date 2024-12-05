@@ -1,13 +1,8 @@
-import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
-import Footer from "./components/Footer/Footer";
+import { useRoutes } from "react-router-dom";
+import routes from "./routes";
 
 export default function App() {
-  return (
-    <>
-    <Header/>
-    <Main/>
-    <Footer/>
-    </>
-  )
+  const router = useRoutes(routes);
+
+  return <>{router}</>;
 }

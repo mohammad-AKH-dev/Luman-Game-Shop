@@ -36,7 +36,7 @@ export default function Topbar() {
         </div>
         <div className="topbar-left__section flex lg:w-[50%] justify-end">
           <div className="menus hidden lg:flex items-center justify-center gap-4 ml-10">
-            <Menu title={"محصولات"}>
+            <Menu title={"محصولات"} href={'/products'}>
               <WorkOutlineIcon  className="text-purple cursor-pointer"/>
             </Menu>
             <Menu title={"مورد علاقه ها"}>

@@ -166,13 +166,13 @@ export default function Footer() {
         </FooterLinks>
         
       </div>
-      <div className="Footer-bar bg-footer flex items-center justify-between px-8 py-6 rounded-2xl mt-12">
+      <div className="Footer-bar bg-footer flex flex-col text-center gap-4 justify-center sm1:flex-row items-center sm1:justify-between px-8 py-6 rounded-2xl mt-12">
         <div className="Footer-copy__item text-[14px]">
           کپی رایت© 2022 برند شما. تمامی حقوق محفوظ است.
         </div>
         <div className="Footer-img__wrapper w-[150px]">
           <img
-            className="Footer-logo w-[38px] h-[32px]"
+            className="Footer-logo w-[38px] mx-auto sm1:mx-0 h-[32px]"
             src="images/Icons/logo2.png"
           />
         </div>

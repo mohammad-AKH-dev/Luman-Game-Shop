@@ -26,6 +26,10 @@ ul,li{
     list-style: none;
 }
 
+a.active a::after {
+    width:100% !important;
+}
+
 .swiper-pagination-bullet-active{
     background: #a04cff !important;
 }
