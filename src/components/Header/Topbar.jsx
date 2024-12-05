@@ -39,7 +39,7 @@ export default function Topbar() {
             <Menu title={"محصولات"} href={'/products'}>
               <WorkOutlineIcon  className="text-purple cursor-pointer"/>
             </Menu>
-            <Menu title={"مورد علاقه ها"}>
+            <Menu title={"مورد علاقه ها"} href={'/favourites'}>
               <FavoriteBorderIcon className="text-pink cursor-pointer" />
             </Menu>
           </div>

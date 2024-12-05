@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { useEffect } from "react";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Header/Navbar";
 import Topbar from "../components/Header/Topbar";
@@ -11,6 +12,11 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 export default function Products() {
   const [showState, setShowState] = useState("all");
   const [showingItemsFilter, setShowingItemsFilter] = useState("-1");
+  const params = useParams()
+
+  useEffect(() => {
+    document.title =  'فروشگاه بازی لومان / محصولات'
+  },[params])
 
   return (
     <>
@@ -82,10 +88,10 @@ export default function Products() {
           </div>
           <div className="pagination-wrapper mt-16 flex flex-wrap items-center justify-center gap-8">
              <ArrowForwardIcon className="cursor-pointer"/>
-             <Link to={'/products'} className="px-4 py-2 rounded-md bg-purple hover:bg-violet-500 transition-all delay-100">
+             <Link to={'/products'} className="px-4 py-2 rounded-md transition-all delay-100">
               <span>3</span>
              </Link>
-             <Link to={'/products'} className="px-4 py-2 rounded-md bg-purple hover:bg-violet-500 transition-all delay-100">
+             <Link to={'/products'} className="px-4 py-2 rounded-md transition-all delay-100">
               <span>2</span>
              </Link>
              <Link to={'/products'} className="px-4 py-2 rounded-md bg-purple hover:bg-violet-500 transition-all delay-100">
