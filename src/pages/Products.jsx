@@ -9,6 +9,7 @@ import { useState } from "react";
 import ShopGameBox from "../components/Box/ShopGameBox";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Sidebar from "../components/Menu/Sidebar";
 export default function Products() {
   const [showState, setShowState] = useState("all");
   const [showingItemsFilter, setShowingItemsFilter] = useState("-1");
@@ -22,6 +23,7 @@ export default function Products() {
     <>
       <Topbar />
       <Navbar />
+      <Sidebar/>
       <ShopHeader title={"فروشگاه"}>
         <ProductLinks title={"همه"} href={"/products/category/all"} count={0} />
         <ProductLinks
@@ -45,7 +47,7 @@ export default function Products() {
           count={6}
         />
       </ShopHeader>
-      <div className="shop-sorting__wrapper mt-12">
+      <div className="shop-sorting__wrapper mt-16">
         <div className="container flex justify-between items-center flex-col gap-4 sm1:flex-row sm1:gap-0">
           <div className="shop-sorting-title__wrapper flex items-center gap-2">
             <Link to={"/"}>خانه</Link>
