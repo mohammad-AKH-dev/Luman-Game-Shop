@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import LandingBox from "../Box/LandingBox";
+import Typewriter from 'typewriter-effect';
 
 export default function Landing() {
   return (
@@ -10,15 +11,30 @@ export default function Landing() {
           <h3 className="Landing-subtitle text-[20px] lg:text-4xl text-[#FFFFFFED]">
             با لومان گیم خاص‌ترین
           </h3>
-          <h1 className="Landing-title text-[42px] lg:text-[74px] font-secondaryBold">
-            فروشگاه بازی باش
-          </h1>
+            <Typewriter className={'Landing-title text-[42px] lg:text-[74px] font-secondaryBold"'}
+              options={{
+                loop:true,
+                autoStart:true,
+              }}
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString("فروشگاه بازی باش!")
+                  .pauseFor(2500)
+                  .deleteAll()
+                  .start();
+              }}
+            />
           <div className="Landing-sub text-[#FFFFFF94] font-primary flex flex-col gap-4">
-            <p className='text-[14px] tracking-tighter	 lg:text-[1rem]'>برای تغییر این متن بر روی دکمه ویرایش کلیک کنید</p>
-            <p className='text-[14px] tracking-tighter	 lg:text-[1rem]'>نامفهوم از صنعت چاپ و با استفاده طراحان گرافیک است</p>
+            <p className="text-[14px] tracking-tighter lg:text-[1rem]">
+              برای تغییر این متن بر روی دکمه ویرایش کلیک کنید
+            </p>
+            <p className="text-[14px] tracking-tighter lg:text-[1rem]">
+              نامفهوم از صنعت چاپ و با استفاده طراحان گرافیک است
+            </p>
           </div>
           <div className="Landing-shop__buttons flex justify-center flex-col xs:flex-row xs:justify-start items-center font-primary font-bold gap-5 mt-14">
-            <div className="buy-button bg-purple p-3 lg:p-4 px-11 rounded-full 
+            <div
+              className="buy-button bg-purple p-3 lg:p-4 px-11 rounded-full 
             shadow-box group 
             hover:bg-[#9546ed]
             transition-all 
@@ -26,7 +42,8 @@ export default function Landing() {
             delay-100 
             cursor-pointer
             hover:shadow-boxHover
-            ">
+            "
+            >
               <Link to={"/"}>خرید آیتم های بازی</Link>
               <KeyboardBackspaceIcon className="pr-2 group-hover:translate-x-[-7px] delay-100 transition-all text-3xl" />
             </div>
@@ -61,8 +78,8 @@ export default function Landing() {
               className="w-full"
             />
           </div>
-          <div className='arrow-img__wrapper w-[194px] h-[193px] lg:hidden hidden sm:block sm:absolute top-[15rem] left-[-5rem] sm:left-[1rem] sm:top-[8rem] rotate-[264deg]'>
-             <img src="images/arrow-slider2.svg" alt="" />
+          <div className="arrow-img__wrapper w-[194px] h-[193px] lg:hidden hidden sm:block sm:absolute top-[15rem] left-[-5rem] sm:left-[1rem] sm:top-[8rem] rotate-[264deg]">
+            <img src="images/arrow-slider2.svg" alt="" />
           </div>
         </div>
         <div className="w-full mx-auto lg:w-[50%] Landing-left__section flex items-center justify-center">

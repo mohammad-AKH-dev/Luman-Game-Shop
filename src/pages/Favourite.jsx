@@ -14,7 +14,7 @@ export default function Favourite() {
   const params = useParams();
 
   useEffect(() => {
-    document.title = "فروشگاه بازی لومان / موردعلاقه ها";
+    document.title = "موردعلاقه ها";
   }, [params]);
   return (
     <>

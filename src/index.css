@@ -30,6 +30,25 @@ a.active a::after {
     width:100% !important;
 }
 
+.Typewriter__wrapper{
+    font-size: 42px;
+    font-family: 'Rokh-Bold';
+}
+
+.Typewriter__cursor{
+    font-size: 42px;
+    font-family: 'Rokh-Bold';
+}
+
+@media all and (min-width:1024px){
+    .Typewriter__wrapper{
+        font-size: 74px;
+    }
+    .Typewriter__cursor :{
+        font-size: 74px;
+    }
+}
+
 .swiper-pagination-bullet-active{
     background: #a04cff !important;
 }

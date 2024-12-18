@@ -10,13 +10,14 @@ import ShopGameBox from "../components/Box/ShopGameBox";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Sidebar from "../components/Menu/Sidebar";
+
 export default function Products() {
   const [showState, setShowState] = useState("all");
   const [showingItemsFilter, setShowingItemsFilter] = useState("-1");
   const params = useParams()
 
   useEffect(() => {
-    document.title =  'فروشگاه بازی لومان / محصولات'
+    document.title =  'محصولات'
   },[params])
 
   return (

@@ -1,11 +1,15 @@
 import { useRoutes } from "react-router-dom";
 import routes from "./routes";
 import MyContext from "./contexts/context";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App() {
   const router = useRoutes(routes);
   const [showSidebar,setShowSidebar] = useState(false)
+
+  useEffect(() => {
+     handleHideSidebar()
+  },[window.location.pathname])
 
   const handleShowSidebar = () => {
     setShowSidebar(true)
