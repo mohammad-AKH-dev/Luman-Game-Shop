@@ -16,9 +16,23 @@ import { Star } from "@mui/icons-material";
 import FormInput from "../components/Forminput";
 import { useState } from "react";
 import RelatedProducts from "../components/RelatedProducts";
+import ReactImageZoom from "react-image-zoom";
 
 export default function MainProduct() {
   const [isChechked, setIsChecked] = useState(false);
+
+  const props = {
+    width:0,
+    height:0,
+    zoomPosition: "original",
+    zoomWidth: 420,
+    img: "/images/slider-games/spider-man.webp",
+    style: {
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",  
+    },
+  };
 
   const StyledRating = styled(Rating)({
     "& .MuiRating-iconEmpty	": {
@@ -32,13 +46,12 @@ export default function MainProduct() {
       <Sidebar />
       <section className="main-product__section mt-24">
         <div className="container">
-          <div className="product-wrapper flex items-center justify-center text-center 
-          xs2:items-start xs2:justify-normal xs2:text-right flex-wrap xs2:flex-nowrap gap-x-8">
-            <div className="product-img__wrapper max-w-[420px] max-h-[420px]">
-              <img
-                src="/images/slider-games/spider-man.webp"
-                className="w-full h-full object-cover rounded-lg"
-              />
+          <div
+            className="product-wrapper flex items-center justify-center text-center 
+          xs2:items-start xs2:justify-normal xs2:text-right flex-wrap xs2:flex-nowrap gap-x-8"
+          >
+            <div className="product-img__wrapper w-[420px] h-[420px]">
+              <ReactImageZoom {...props} className={"cursor-pointer"} />
             </div>
             <div className="product-details mt-8 xs2:mt-0">
               <h3 className="product-title font-bold text-[28px]">اسپایدرمن</h3>
@@ -180,12 +193,17 @@ export default function MainProduct() {
                   برای اینکه بتوانید عکس ها را به بررسی خود اضافه کنید باید وارد
                   سیستم شوید.
                 </p>
-                <button type="submit" className="mt-6 shadow-box hover:shadow-boxHover
-                 outline-none rounded-3xl border-none bg-purple px-6 pb-3 pt-2">ثبت</button>
+                <button
+                  type="submit"
+                  className="mt-6 shadow-box hover:shadow-boxHover
+                 outline-none rounded-3xl border-none bg-purple px-6 pb-3 pt-2"
+                >
+                  ثبت
+                </button>
               </form>
             </div>
           </div>
-        <RelatedProducts/>
+          <RelatedProducts />
         </div>
       </section>
       <Footer />

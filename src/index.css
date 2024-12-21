@@ -40,6 +40,8 @@ a.active a::after {
     font-family: 'Rokh-Bold';
 }
 
+
+
 @media all and (min-width:1024px){
     .Typewriter__wrapper{
         font-size: 74px;
