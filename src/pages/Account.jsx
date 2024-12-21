@@ -13,7 +13,8 @@ export default function Account() {
   const [showLoginPassword, setShowLoginPassword] = useState(false);
   const [isChechked, setIsChecked] = useState(false);
   let params = useParams()
-
+  
+  
 
   useEffect(() => {
     document.title = "ورود / ثبت نام";
