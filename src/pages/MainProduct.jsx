@@ -1,7 +1,7 @@
 import Topbar from "../components/Header/Topbar";
 import Navbar from "../components/Header/Navbar";
 import Sidebar from "../components/Menu/Sidebar";
-import Footer from "../components/Footer/Footer";
+
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
@@ -17,6 +17,7 @@ import FormInput from "../components/Forminput";
 import { useState } from "react";
 import RelatedProducts from "../components/RelatedProducts";
 import ReactImageZoom from "react-image-zoom";
+import Footer from "../components/Footer/Footer";
 
 export default function MainProduct() {
   const [isChechked, setIsChecked] = useState(false);
@@ -30,7 +31,8 @@ export default function MainProduct() {
     style: {
       width: "100%",
       height: "100%",
-      objectFit: "cover",  
+      objectFit: "cover",
+      borderRadius: '15px'
     },
   };
 
@@ -206,7 +208,7 @@ export default function MainProduct() {
           <RelatedProducts />
         </div>
       </section>
-      <Footer />
+      <Footer/>
     </>
   );
 }
