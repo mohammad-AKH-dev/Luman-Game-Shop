@@ -177,8 +177,8 @@ export default function MainProduct() {
                 <textarea className="min-h-[190px] w-full mt-4 rounded-xl bg-secondary text-white p-2"></textarea>
               </div>
               <form action="#" className="user-comment__informations mt-2">
-                <FormInput title={"نام"} />
-                <FormInput title={"ایمیل"} />
+                <FormInput title={"نام"}  type={'text'} required={true} style={'bg-secondary'} inputStyle={'bg-secondary'}/>
+                <FormInput title={"ایمیل"}  type={'email'} required={true} style={'bg-secondary'} inputStyle={'bg-secondary'}/>
                 <div>
                   <input
                     type="checkbox"

@@ -45,11 +45,15 @@ export default function Account() {
             style={"bg-secondary"}
             type={'text'}
             title={"نام کاربری یا آدرس ایمیل"}
+            inputStyle={'bg-secondary'}
+            required={true}
           />
           <FormInput
             style={"bg-secondary"}
             type={!showLoginPassword ? "password" : "text"}
             title={"گذرواژه"}
+            inputStyle={'bg-secondary'}
+            required={true}
           >
             {!showLoginPassword ? (
               <>
@@ -96,16 +100,22 @@ export default function Account() {
             style={"bg-secondary"}
             title={"نام کاربری "}
             type={'text'}
+            required={true}
+            inputStyle={'bg-secondary'}
           />
           <FormInput
             style={"bg-secondary"}
             title={"آدرس ایمیل"}
             type={'email'}
+            required={true}
+            inputStyle={'bg-secondary'}
           />
           <FormInput
             style={"bg-secondary"}
             type={!showLoginPassword ? "password" : "text"}
             title={"گذرواژه"}
+            required={true}
+            inputStyle={'bg-secondary'}
           >
             {!showLoginPassword ? (
               <>

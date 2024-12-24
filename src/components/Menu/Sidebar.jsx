@@ -19,8 +19,8 @@ export default function Sidebar() {
           <CloseIcon className="text-[#777] cursor-pointer" onClick={() => context.handleHideSidebar()} />
         </div>
         <form action="#" className={`login-form ${context.showSidebar ? 'opacity-100 visible' : 'opacity-0 invisible'} border-y border-y-[#ffffff3b] py-4 my-6`}>
-         <FormInput type={'text'} title={'نام کاربری یا ایمیل'} />
-         <FormInput type={!showPassword ? 'password' : 'text'} title={'گذرواژه'}>
+         <FormInput type={'text'} title={'نام کاربری یا ایمیل'}  required={true}/>
+         <FormInput type={!showPassword ? 'password' : 'text'} title={'گذرواژه'} required={true}>
           {
             !showPassword ? (
               <>
