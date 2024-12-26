@@ -22,6 +22,7 @@ export default {
         boxHover: '1px 2px 13px #9547edb3'
       },
       screens: {
+        
         'sm1': '576px',
 
         'xs': '678px',

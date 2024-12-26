@@ -53,7 +53,7 @@ export default function MainProduct() {
           xs2:items-start xs2:justify-normal xs2:text-right flex-wrap xs2:flex-nowrap gap-x-8"
           >
             <div className="product-img__wrapper w-[420px] h-[420px]">
-              <ReactImageZoom {...props} className={"cursor-pointer"} />
+              <ReactImageZoom {...props}/>
             </div>
             <div className="product-details mt-8 xs2:mt-0">
               <h3 className="product-title font-bold text-[28px]">اسپایدرمن</h3>

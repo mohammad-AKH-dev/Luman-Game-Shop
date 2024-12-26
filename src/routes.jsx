@@ -9,6 +9,8 @@ import Orders from "./pages/userPanel/Orders";
 import Downloads from "./pages/userPanel/Downloads";
 import Address from "./pages/userPanel/Address";
 import Details from "./pages/userPanel/Details";
+import ShoppingBasket from "./pages/ShoppingBasket";
+import Checkout from "./pages/Checkout";
 
 const routes = [
     {path:'/',element:<Index />},
@@ -17,6 +19,8 @@ const routes = [
     {path:'/favourites',element:<Favourite/>},
     {path:'/account',element:<Account/>},
     {path:'/products/product/:productName',element: <MainProduct/> },
+    {path:'/cart',element:<ShoppingBasket/>},
+    {path:'/cart/checkout',element:<Checkout/>},
     {path:'/panel',element: <UserIndex/>, children:[
         {path:'dashboard',element:<Dashboard/>},
         {path:'orders',element:<Orders/>},

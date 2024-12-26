@@ -56,7 +56,7 @@ export default function Topbar() {
 
           <div className="access-menus flex items-center justify-center gap-4">
             <div className="shopping-icon relative flex items-center gap-4 group">
-              <Link to="/products">
+              <Link to="/cart">
                 <ShoppingCartIcon className="text-2xl cursor-pointer" />
               </Link>
               <div className="w-4 h-4 bg-purple rounded-lg absolute top-[-5px] right-[-10px] text-white text-center flex items-center justify-center">

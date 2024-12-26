@@ -25,19 +25,19 @@ export default function Dashboard() {
         عبور خود را ویرایش کنید.
       </p>
       <div className="my-account__content-left-section__boxes-wrapper mt-6 grid grid-cols-2 md:grid-cols-3 place-items-center gap-4">
-        <UserPanelBox title={"سفارش ها"} href={"orders"}>
+        <UserPanelBox title={"سفارش ها"} href={"orders"} type={'link'}>
           <IntegrationInstructionsIcon className="text-[2rem] group-hover:text-[#a04cff]" />
         </UserPanelBox>
-        <UserPanelBox title={"دانلودها"} href={"downloads"}>
+        <UserPanelBox title={"دانلودها"} href={"downloads"} type={'link'}>
           <DownloadForOfflineIcon className="text-[2rem] group-hover:text-[#a04cff]" />
         </UserPanelBox>
-        <UserPanelBox title={"آدرس"} href={"address"}>
+        <UserPanelBox title={"آدرس"} href={"address"} type={'link'}>
           <LocationOnIcon className="text-[2rem] group-hover:text-[#a04cff]" />
         </UserPanelBox>
-        <UserPanelBox title={"جزئیات حساب"} href={"my-account"}>
+        <UserPanelBox title={"جزئیات حساب"} href={"my-account"} type={'link'}>
           <PersonPinIcon className="text-[2rem] group-hover:text-[#a04cff]" />
         </UserPanelBox>
-        <UserPanelBox title={"خروج"}>
+        <UserPanelBox title={"خروج"} href={'#'} type={'div'}>
           <LogoutIcon className="text-[2rem] group-hover:text-[#a04cff]" />
         </UserPanelBox>
       </div>
