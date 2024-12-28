@@ -20,7 +20,7 @@ const routes = [
     {path:'/account',element:<Account/>},
     {path:'/products/product/:productName',element: <MainProduct/> },
     {path:'/cart',element:<ShoppingBasket/>},
-    {path:'/cart/checkout',element:<Checkout/>},
+    {path:'/checkout',element:<Checkout/>},
     {path:'/panel',element: <UserIndex/>, children:[
         {path:'dashboard',element:<Dashboard/>},
         {path:'orders',element:<Orders/>},
