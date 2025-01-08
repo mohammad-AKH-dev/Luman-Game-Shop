@@ -44,11 +44,11 @@ export default function Landing() {
             hover:shadow-boxHover
             "
             >
-              <Link to={"/"}>خرید آیتم های بازی</Link>
+              <Link to={"/products"}>خرید آیتم های بازی</Link>
               <KeyboardBackspaceIcon className="pr-2 group-hover:translate-x-[-7px] delay-100 transition-all text-3xl" />
             </div>
             <div className="shop-button group">
-              <Link to={"/"}> آیتم های بازی</Link>
+              <Link to={"/products/product/spider-man"}> آیتم های بازی</Link>
               <KeyboardBackspaceIcon className="pr-2 group-hover:translate-x-[-7px] delay-100 transition-all text-3xl" />
             </div>
           </div>

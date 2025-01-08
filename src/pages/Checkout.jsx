@@ -63,7 +63,7 @@ export default function Checkout() {
                 <FormInput title={'شهر'} type={'text'} labelMargin={'-mb-2'} style={'w-full bg-secondary'} inputStyle={'bg-secondary'}/>
                 <div className="address-inputs__wrapper mt-4 mb-4">
                   <FormInput title={'آدرس خیابان'} type={'text'} placeholder={'نام خیابان و پلاک خانه'} required={true} inputStyle={'bg-secondary'} style={'w-full bg-secondary'}/>
-                  <FormInput type={'text'} placeholder={'آپارتمان،مجتمع،واحد و ...(اختیاری)'} inputStyle={'bg-secondary'} style={'w-full mt-1 bg-secondary'}/>
+                  <FormInput type={'text'} placeholder={'آپارتمان،مجتمع،واحد و ...(اختیاری)'} labelMargin={'w-full'} inputStyle={'bg-secondary'} style={'w-full mt-1 bg-secondary'}/>
                 </div>
                 <FormInput title={'کدپستی (بدون فاصله و با اعداد انگلیسی) '} required={true} type={'text'} style={'w-full bg-secondary'} inputStyle={'bg-secondary'}/>
                 <FormInput title={'تلفن'} required={true} type={'text'} style={'w-full bg-secondary'} inputStyle={'bg-secondary'}/>

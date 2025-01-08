@@ -3,6 +3,9 @@ import FooterInfoBox from "../Box/FooterInfoBox";
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import FooterLinks from "./FooterLinks";
 import FooterBox from "../Box/FooterBox";
+
+import headphone from "/images/Icons/location.png"
+
 export default function Footer() {
   return (
     <footer className="Footer container rounded-xl mt-32 py-12 px-8 bg-secondary">
@@ -10,7 +13,7 @@ export default function Footer() {
       <div className="Footer-items__wrapper w-full flex flex-wrap gap-3 sm1:hidden text-center sm1:text-right">
         <div className="Footer-contacts flex flex-col gap-5 mx-auto sm1:mx-0">
           <img
-            src="images/logo.png"
+            src="/images/logo.png"
             className="Footer-logo max-w-[190px] mx-auto sm1:mx-0 sm1:max-w-[137px]"
             alt="Footer"
           />
@@ -25,7 +28,7 @@ export default function Footer() {
               title={`${digitsEnToFa(9119876543)} - ${digitsEnToFa(
                 9119876543
               )}`}
-              img={"images/Icons/headphone.png"}
+              img={headphone}
             />
             <FooterInfoBox
               title={"ایران - تهران - منطقه 1 - تجریش"}
@@ -39,9 +42,7 @@ export default function Footer() {
         </div>
         <div className="FooterLinks-wrapper w-full mt-[1rem] flex flex-wrap justify-center sm1:justify-start gap-x-28 sm1:gap-x-20 gap-y-[2rem] sm1:grid sm1:grid-cols-2 sm1:min-w-[260px] sm:grid-cols-3">
         <FooterLinks title={"لینک های کاربردی"}>
-          <li className="Footer-links-item text-[#a39f9f]">
-            <Link>وبلاگ</Link>
-          </li>
+        
           <li className="Footer-links-item text-[#a39f9f]">
             <Link>درباره ما</Link>
           </li>
@@ -79,10 +80,10 @@ export default function Footer() {
           </li>
         </FooterLinks>
         <FooterLinks title={"ما را دنبال کنید!"}>
-          <FooterBox title={"اینستاگرام"} img={"images/Icons/INSTAGRAM.png"} />
-          <FooterBox title={"واتساپ"} img={"images/Icons/WHATSAPP.png"} />
-          <FooterBox title={"توییتر"} img={"images/Icons/TWITTER.png"} />
-          <FooterBox title={"یوتیوب"} img={"images/Icons/YOUTUBE.png"} />
+          <FooterBox title={"اینستاگرام"} img={"./images/Icons/INSTAGRAM.png"} />
+          <FooterBox title={"واتساپ"} img={"./images/Icons/WHATSAPP.png"} />
+          <FooterBox title={"توییتر"} img={"./images/Icons/TWITTER.png"} />
+          <FooterBox title={"یوتیوب"} img={"./images/Icons/YOUTUBE.png"} />
         </FooterLinks>
         </div>
       </div>
