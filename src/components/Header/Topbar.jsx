@@ -111,9 +111,12 @@ export default function Topbar() {
               )}
 
             </div>
-              <div className="person-icon" onClick={() => context.handleShowSidebar()}>
+              {/* <div className="person-icon" onClick={() => context.handleShowSidebar()}>
                 <PersonIcon className="text-2xl cursor-pointer" />
-              </div>
+              </div> */}
+              <Link to={'/a-panel/dashboard'} className="person-icon" >
+                <PersonIcon className="text-2xl cursor-pointer" />
+              </Link>
           </div>
         </div>
       </div>

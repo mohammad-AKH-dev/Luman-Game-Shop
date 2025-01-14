@@ -12,6 +12,7 @@ import Details from "./pages/userPanel/Details";
 import ShoppingBasket from "./pages/ShoppingBasket";
 import Checkout from "./pages/Checkout";
 import AdminIndex from "./pages/adminPanel/AdminIndex";
+import AdminDashboard from "./pages/adminPanel/AdminDashboard";
 
 const routes = [
     {path:'/',element:<Index />},
@@ -29,8 +30,8 @@ const routes = [
         {path:'address',element:<Address/>},
         {path:'my-account',element:<Details/>}
     ]},
-    {path:'/a-panel',element:<AdminIndex/>,children:[
-        {path:'dashboard',},
+    {path:'/a-panel/',element:<AdminIndex/>,children:[
+       {path:'dashboard',element:<AdminDashboard/>}
     ]}
 ]
 

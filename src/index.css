@@ -1,3 +1,5 @@
+@import url('./chart.css');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -65,6 +67,23 @@ a.active a::after {
 .swiper-pagination-bullet-active{
     background: #a04cff !important;
 }
+ 
+@media all and (max-width:530px) {
+     .mobile-table__wrapper {
+        justify-content: center !important;
+        row-gap: 3rem;
+        flex-direction: column;
+     }
+     .mobile-table__right-section{
+        text-align: center;
+     }
+     .css-rbklcn-MuiResponsiveChart-container {
+        padding-left: 3rem;
+     }
+     .table-title {
+        text-align: center !important;
+     }
+}
 
 @media all and (max-width:300px) {
     .product-cart__title-wrapper{
@@ -75,3 +94,8 @@ a.active a::after {
         margin-bottom: 2rem !important;
     }
 }
+
+.admin-panel__link.active{
+    color: #a04cff !important;
+}
+

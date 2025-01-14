@@ -1,0 +1,34 @@
+.css-1x2wln8-MuiChartsAxis-root-MuiChartsXAxis-root .MuiChartsAxis-tickLabel {
+    fill: #ffffff99 !important;
+    font-family: 'Yekan-Regular' !important;
+    font-size: 12px !important;
+}
+
+.css-175e1i1-MuiChartsAxis-root-MuiChartsYAxis-root .MuiChartsAxis-line {
+    stroke: #ffffff99 !important;
+}
+
+.css-175e1i1-MuiChartsAxis-root-MuiChartsYAxis-root > g > text {
+    fill: #ffffff99 !important; 
+    transform: translateX(-15px);
+    font-size: 12px !important;
+}
+.css-1x2wln8-MuiChartsAxis-root-MuiChartsXAxis-root .MuiChartsAxis-line {
+    stroke: #ffffff99 !important;
+}
+
+.css-175e1i1-MuiChartsAxis-root-MuiChartsYAxis-root .MuiChartsAxis-tick {
+    stroke: #ffffff99 !important;
+}
+
+.css-1x2wln8-MuiChartsAxis-root-MuiChartsXAxis-root .MuiChartsAxis-tick {
+    stroke: #ffffff99 !important;
+}
+
+
+.css-nsbw82-MuiChartsLegend-root text {
+    fill: #ffffff99 !important;
+    font-family: 'Yekan-Regular' !important;
+    font-size: 12px !important;
+    transform: translateX(-40px) !important;
+}
