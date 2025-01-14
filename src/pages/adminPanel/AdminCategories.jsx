@@ -63,7 +63,7 @@ export default function AdminCategories() {
             <div className="product-input__wrapper">
               <FormInput
                 inputStyle={"hidden"}
-                title={"محصولات"}
+                title={"دسته بندی های اصلی"}
                 required={true}
               >
                 <select

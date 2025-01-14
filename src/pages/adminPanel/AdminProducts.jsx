@@ -25,7 +25,7 @@ export default function AdminProducts() {
           <div className="price-input__wrapper">
             <FormInput type={"text"} title={"قیمت محصول"} required={true} />
           </div>
-          <div className="email-input__wrapper">
+          <div className="product-input__wrapper">
             <FormInput
               type={"file"}
               accept={"image/png, image/jpg, image/jpeg"}
