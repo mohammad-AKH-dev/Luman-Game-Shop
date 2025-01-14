@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import GroupIcon from "@mui/icons-material/Group";
 import InventoryIcon from "@mui/icons-material/Inventory";
@@ -9,18 +9,22 @@ import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import SearchIcon from "@mui/icons-material/Search";
 import FormInput from "../../components/Forminput";
 
-
-
 export default function AdminIndex() {
   return (
     <div className="admin-panel flex justify-between">
       {/* side bar */}
       <div className="admin-panel__sidebar bg-secondary p-6 max-w-[300px] min-w-[150px] sm1:min-w-[300px] sticky right-0 top-0 h-screen">
         <h3 className="admin-panel__title border-b border-b-[#333] pb-5">
-          <img src="/images/logo.png" className="max-w-[120px] sm1:max-w-[160px]" alt="لومان" />
+          <Link to={"/"}>
+            <img
+              src="/images/logo.png"
+              className="max-w-[120px] sm1:max-w-[160px]"
+              alt="لومان"
+            />
+          </Link>
         </h3>
         <ul className="admin-panel__list mt-4 px-3 flex flex-col gap-y-8">
-          <li className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
+          <NavLink to={"/a-panel/dashboard"} className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
             <DashboardIcon className="max-w-[20px]" />
             <NavLink
               to={"/a-panel/dashboard"}
@@ -28,8 +32,8 @@ export default function AdminIndex() {
             >
               داشبورد
             </NavLink>
-          </li>
-          <li className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
+          </NavLink>
+          <NavLink to={"/a-panel/users"} className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
             <GroupIcon className="max-w-[20px]" />
             <NavLink
               to={"/a-panel/users"}
@@ -37,8 +41,8 @@ export default function AdminIndex() {
             >
               کاربران
             </NavLink>
-          </li>
-          <li className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
+          </NavLink>
+          <NavLink to={"/a-panel/products"} className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
             <InventoryIcon className="max-w-[20px]" />
             <NavLink
               to={"/a-panel/products"}
@@ -46,8 +50,8 @@ export default function AdminIndex() {
             >
               محصولات
             </NavLink>
-          </li>
-          <li className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
+          </NavLink>
+          <NavLink  to={"/a-panel/discounts"} className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
             <DiscountIcon className="max-w-[20px]" />
             <NavLink
               to={"/a-panel/discounts"}
@@ -55,8 +59,8 @@ export default function AdminIndex() {
             >
               کد های تخفیف
             </NavLink>
-          </li>
-          <li className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
+          </NavLink>
+          <NavLink to={"/a-panel/discounts"} className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
             <CategoryIcon className="max-w-[20px]" />
             <NavLink
               to={"/a-panel/discounts"}
@@ -64,8 +68,8 @@ export default function AdminIndex() {
             >
               دسته بندی ها
             </NavLink>
-          </li>
-          <li className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
+          </NavLink>
+          <NavLink to={"/a-panel/detailes"} className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
             <AccountCircleIcon className="max-w-[20px]" />
             <NavLink
               to={"/a-panel/detailes"}
@@ -73,7 +77,7 @@ export default function AdminIndex() {
             >
               جزییات حساب
             </NavLink>
-          </li>
+          </NavLink>
           <li className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
             <PowerSettingsNewIcon className="max-w-[20px]" />
             <span
@@ -114,11 +118,7 @@ export default function AdminIndex() {
             </div>
           </div>
         </div>
-        <div className="content">
-         {
-          <Outlet/>
-         }
-        </div>
+        <div className="content">{<Outlet />}</div>
       </div>
     </div>
   );

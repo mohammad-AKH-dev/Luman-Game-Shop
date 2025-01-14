@@ -37,6 +37,7 @@ export default function AdminUsers() {
             </div>
         </div>
             <button type="button" className="bg-purple mt-2 px-6 py-2 text-[14px] shadow-box hover:shadow-boxHover rounded-3xl">اضافه کردن</button>
+            </div>
         {/* users desktop size*/}
         <div className="table-wrapper mt-8 mr-2">
             <h3 className="table-title text-[26px] font-bold text-right">کاربران</h3>
@@ -98,7 +99,7 @@ export default function AdminUsers() {
             </div>
             </div>
           </div>
-      </div>
+      
     </>
   )
 }

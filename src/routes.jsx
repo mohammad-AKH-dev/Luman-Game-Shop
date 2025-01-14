@@ -14,6 +14,7 @@ import Checkout from "./pages/Checkout";
 import AdminIndex from "./pages/adminPanel/AdminIndex";
 import AdminDashboard from "./pages/adminPanel/AdminDashboard";
 import AdminUsers from "./pages/adminPanel/AdminUsers";
+import AdminProducts from "./pages/adminPanel/AdminProducts";
 
 const routes = [
     {path:'/',element:<Index />},
@@ -33,7 +34,8 @@ const routes = [
     ]},
     {path:'/a-panel/',element:<AdminIndex/>,children:[
        {path:'dashboard',element:<AdminDashboard/>},
-       {path:'users',element:<AdminUsers/>}
+       {path:'users',element:<AdminUsers/>},
+       {path:'products',element:<AdminProducts/>}
     ]}
 ]
 

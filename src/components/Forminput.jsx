@@ -9,7 +9,8 @@ export default function FormInput({
   inputStyle,
   labelMargin,
   required,
-  placeholder
+  placeholder,
+  accept
 }) {
   return (
     <>
@@ -28,6 +29,7 @@ export default function FormInput({
       >
         <input
           type={type}
+          accept={accept && accept}
           placeholder={placeholder ? placeholder : ''}
           className={`input-form ${inputStyle ? inputStyle : ""} ${
             children ? "w-[90%]" : "w-full"

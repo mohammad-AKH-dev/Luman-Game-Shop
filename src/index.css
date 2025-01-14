@@ -83,6 +83,9 @@ a.active a::after {
      .table-title {
         text-align: center !important;
      }
+     .mobile-table__list-item > img {
+        margin-top: 0 !important;
+     }
 }
 
 @media all and (max-width:300px) {
@@ -95,7 +98,7 @@ a.active a::after {
     }
 }
 
-.admin-panel__link.active{
+.admin-panel__link.active,.admin-panel__item.active{
     color: #a04cff !important;
 }
 
