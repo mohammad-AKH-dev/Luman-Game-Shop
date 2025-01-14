@@ -30,7 +30,7 @@ export default function AdminProducts() {
               type={"file"}
               accept={"image/png, image/jpg, image/jpeg"}
               style={"relative flex justify-between text-[14px] w-full"}
-              inputStyle={"opacity-0 z-50 absolute inset-0"}
+              inputStyle={"opacity-0 z-50 absolute inset-0 cursor-pointer"}
               title={"انتخاب تصویر"}
               required={true}
             >
@@ -45,6 +45,7 @@ export default function AdminProducts() {
         >
           اضافه کردن
         </button>
+        </div>
         {/* products */}
 
         <div className="table-wrapper mt-8 mr-2">
@@ -124,7 +125,6 @@ export default function AdminProducts() {
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 }

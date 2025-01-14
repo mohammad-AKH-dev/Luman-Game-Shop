@@ -102,3 +102,11 @@ a.active a::after {
     color: #a04cff !important;
 }
 
+.radio-group__title , .css-rizt0-MuiTypography-root{
+    font-family: 'Yekan-Regular' !important
+}
+
+.css-rizt0-MuiTypography-root {
+    font-size: 14px !important;
+    color: #ffffff99;
+}

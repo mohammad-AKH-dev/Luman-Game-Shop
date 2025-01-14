@@ -15,6 +15,7 @@ import AdminIndex from "./pages/adminPanel/AdminIndex";
 import AdminDashboard from "./pages/adminPanel/AdminDashboard";
 import AdminUsers from "./pages/adminPanel/AdminUsers";
 import AdminProducts from "./pages/adminPanel/AdminProducts";
+import AdminDiscounts from "./pages/adminPanel/AdminDiscounts";
 
 const routes = [
     {path:'/',element:<Index />},
@@ -35,7 +36,8 @@ const routes = [
     {path:'/a-panel/',element:<AdminIndex/>,children:[
        {path:'dashboard',element:<AdminDashboard/>},
        {path:'users',element:<AdminUsers/>},
-       {path:'products',element:<AdminProducts/>}
+       {path:'products',element:<AdminProducts/>},
+       {path:'discounts',element:<AdminDiscounts/>}
     ]}
 ]
 

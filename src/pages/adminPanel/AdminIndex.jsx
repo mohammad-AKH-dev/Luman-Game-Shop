@@ -60,10 +60,10 @@ export default function AdminIndex() {
               کد های تخفیف
             </NavLink>
           </NavLink>
-          <NavLink to={"/a-panel/discounts"} className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
+          <NavLink to={"/a-panel/categories"} className="admin-panel__item text-[#ffffff99] hover:text-[#5667ff] transition-all flex gap-x-3 cursor-pointer">
             <CategoryIcon className="max-w-[20px]" />
             <NavLink
-              to={"/a-panel/discounts"}
+              to={"/a-panel/categories"}
               className="text-inherit admin-panel__link text-[14px]"
             >
               دسته بندی ها
