@@ -6,25 +6,23 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-
 import { useState } from "react";
 
-export default function AdminDiscounts() {
-  const [isShowCategories, setIsShowCategories] = useState("all");
+export default function AdminCategories() {
+  const [showMainCategories, setIsShowMainCategories] = useState("child");
   return (
     <>
-      {/* make new discount */}
-      <div className="add-new-discount__wrapper mt-12">
-        <h2 className="add-new-discount__title text-[26px] font-bold">
-          اعمال کد تخفیف
+      <div className="add-new-category__wrapper mt-12">
+        <h2 className="add-new-category__title text-[26px] font-bold">
+          اضافه کردن دسته بندی جدید
         </h2>
-        <div className="inputs-wrapper grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 mt-12">
+        <div className="inputs-wrapper grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 mt-12">
           <FormControl>
             <FormLabel
               id="demo-row-radio-buttons-group-label"
               className="radio-group__title text-[#ffffff99] mb-4"
             >
-              نوع تخفیف
+              نوع دسته بندی
             </FormLabel>
             <RadioGroup
               row
@@ -32,39 +30,36 @@ export default function AdminDiscounts() {
               name="row-radio-buttons-group"
             >
               <FormControlLabel
-                value="all"
+                value="parent"
                 control={
                   <Radio
                     sx={{ color: "#ffffff99" }}
                     onChange={(event) =>
-                      setIsShowCategories(event.target.value)
+                      setIsShowMainCategories(event.target.value)
                     }
-                    checked={isShowCategories === 'all' && true}
                   />
                 }
-                label="همگانی"
+                label="پرنت(والد)"
               />
               <FormControlLabel
-                value="special"
+                value="child"
                 control={
                   <Radio
                     sx={{ color: "#ffffff99" }}
                     onChange={(event) =>
-                      setIsShowCategories(event.target.value)
+                      setIsShowMainCategories(event.target.value)
                     }
                   />
                 }
-                label="محصول خاص"
+                label="فرزند"
+                checked={showMainCategories === 'child' && true}
               />
             </RadioGroup>
           </FormControl>
-          <div className="discount-input__wrapper">
-            <FormInput type={"text"} title={"درصد تخفیف"} required={true} />
+          <div className="name-input__wrapper">
+            <FormInput type={"text"} title={"دسته بندی جدید"} required={true} />
           </div>
-          <div className="discount-input__wrapper">
-            <FormInput type={"text"} title={"اعتبار کد تخفیف"} required={true} />
-          </div>
-          {isShowCategories === "special" && (
+          {showMainCategories === "child" && (
             <div className="product-input__wrapper">
               <FormInput
                 inputStyle={"hidden"}
@@ -75,10 +70,10 @@ export default function AdminDiscounts() {
                   defaultValue={"-1"}
                   className="bg-primary outline-none border-none appearance-none w-full text-center"
                 >
-                  <option value="-1">لطفا یک محصول را انتخاب کنید</option>
-                  <option value="ّForza">فورزا هورایزن 5</option>
-                  <option value="Red Dead 2">رد دد ردمپشن 2</option>
-                  <option value="The Witcher 3">ویچر 3</option>
+                  <option value="-1">لطفا یک پرنت را انتخاب کنید</option>
+                  <option value="Frontend">فرانت اند</option>
+                  <option value="Game">گیم</option>
+                  <option value="Movies">فیلم و سریال</option>
                 </select>
               </FormInput>
             </div>
@@ -86,40 +81,37 @@ export default function AdminDiscounts() {
         </div>
         <button
           type="button"
-          className="bg-purple mt-12 px-6 py-2 text-[14px] shadow-box hover:shadow-boxHover rounded-3xl"
+          className="bg-purple mt-2 px-6 py-2 text-[14px] shadow-box hover:shadow-boxHover rounded-3xl"
         >
-          اعمال کد تخفیف
+          اضافه کردن
         </button>
       </div>
-      {/* discounts */}
       <div className="table-wrapper mt-8 mr-2">
         <h3 className="table-title text-[26px] font-bold text-right">
-          کد های تخفیف
+          دسته بندی ها
         </h3>
         <div className="table-div">
           <table className="hidden sm:table w-full border-collapse mx-auto bg-secondary rounded-xl mt-8">
             <thead>
               <tr>
-                <th className="py-4">کد تخفیف</th>
-                <th className="py-4">درصد کد تخفیف</th>
-                <th className="py-4">اعتبار کد تخفیف</th>
-                <th className="py-4">محصول تخفیف خورده (در صورت وجود)</th>
+                <th className="py-4">دسته بندی</th>
+                <th className="py-4">دسته بندی اصلی (پرنت)</th>
+                <th className="py-4">تاریخ ساخت دسته بندی</th>
                 <th className="py-4">اکشن ها</th>
               </tr>
             </thead>
             <tbody>
               <tr className="text-center">
-                <td className="py-4">Forza-50</td>
-                <td className="py-4">50%</td>
+                <td className="py-4">بازی های پلی استیشن</td>
+                <td className="py-4">گیم</td>
                 <td className="py-4">2025-02-23</td>
-                <td className="py-4">فورزا هورایزن 5</td>
                 <td className="flex items-center gap-x-4 justify-center py-4">
                   <EditIcon
-                    titleAccess="ویرایش کد تخفیف"
+                    titleAccess="ویرایش دسته بندی "
                     className="hover:text-purple transition-all cursor-pointer"
                   />
                   <DeleteIcon
-                    titleAccess="حذف کد تخفیف"
+                    titleAccess="حذف دسته بندی"
                     className="hover:text-purple transition-all cursor-pointer"
                   />
                 </td>
@@ -130,26 +122,28 @@ export default function AdminDiscounts() {
           <div className="mobile-table__wrapper mt-8 flex sm:hidden justify-between">
             <div className="mobile-table__right-section">
               <ul className="mobile-table__list flex flex-col gap-y-8">
-                <li className="mobile-table__list-item">کد تخفیف</li>
-                <li className="mobile-table__list-item">درصد کد تخفیف</li>
-                <li className="mobile-table__list-item">اعتبار کد تخفیف</li>
-                <li className="mobile-table__list-item">محصول تخفیف خورده (در صورت وجود)</li>
-                <li className="mobile-table__list-item">اکشن ها:</li>
+                <li className="mobile-table__list-item">دسته بندی</li>
+                <li className="mobile-table__list-item">
+                  دسته بندی اصلی (پرنت)
+                </li>
+                <li className="mobile-table__list-item">
+                  تاریخ ساخت دسته بندی
+                </li>
+                <li className="mobile-table__list-item">اکشن ها</li>
               </ul>
             </div>
             <div className="mobile-table__left-section text-center text-[#ffffff99]">
               <ul className="mobile-table__list flex flex-col gap-y-8">
-                <li className="mobile-table__list-item">forza-50</li>
-                <li className="mobile-table__list-item">50%</li>
+                <li className="mobile-table__list-item">بازی های پلی استیشن</li>
+                <li className="mobile-table__list-item">گیم</li>
                 <li className="mobile-table__list-item">2025-02-23</li>
-                <li className="mobile-table__list-item">فورزا هواریزن 5</li>
                 <li className="mobile-table__list-item flex items-center justify-center gap-x-2 flex-wrap">
                   <EditIcon
-                    titleAccess="ویرایش کد تخفیف"
+                    titleAccess="ویرایش دسته بندی"
                     className="hover:text-purple transition-all cursor-pointer"
                   />
                   <DeleteIcon
-                    titleAccess="حذف کد تخفیف"
+                    titleAccess="حذف دسته بندی"
                     className="hover:text-purple transition-all cursor-pointer"
                   />
                 </li>
