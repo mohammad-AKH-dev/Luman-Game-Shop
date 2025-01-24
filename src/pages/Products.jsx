@@ -10,14 +10,16 @@ import ShopGameBox from "../components/Box/ShopGameBox";
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Sidebar from "../components/Menu/Sidebar";
+import ProductModal from "../components/Box/ProductModal";
 
 export default function Products() {
   const [showState, setShowState] = useState("all");
   const [showingItemsFilter, setShowingItemsFilter] = useState("-1");
+  const [showProductModal,setShowProductModal] = useState(false)
   const params = useParams()
 
   useEffect(() => {
-    document.title =  'محصولات'
+    document.title =  'محصولات' 
   },[params])
 
   return (
@@ -25,6 +27,9 @@ export default function Products() {
       <Topbar />
       <Navbar />
       <Sidebar/>
+      {
+        showProductModal && <ProductModal price={110000} discount={90000} onClose={() => setShowProductModal(false)}/>
+      }
       <ShopHeader title={"فروشگاه"}>
         <ProductLinks title={"همه"} href={"/products/category/all"} count={0} />
         <ProductLinks
@@ -76,19 +81,20 @@ export default function Products() {
         </div>
         <div className="container">
           <div className="ShopGameBoxes-wrapper grid grid-cols-1 sm1:grid-cols-2 xs2:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
-            <ShopGameBox discount={90000} price={110000} percent={10}/>
-            <ShopGameBox discount={90000} price={110000} percent={10}/>
-            <ShopGameBox price={110000}/>
-            <ShopGameBox price={110000} percent={10}/>
-            <ShopGameBox price={110000} percent={10}/>
+            <ShopGameBox discount={90000} price={110000} percent={10} onShow={() => setShowProductModal(true)}/>
+            <ShopGameBox discount={90000} price={110000} percent={10} onShow={() => setShowProductModal(true)}/>
+            <ShopGameBox price={110000} onShow={() => setShowProductModal(true)}/>
+            <ShopGameBox price={110000} percent={10} onShow={() => setShowProductModal(true)}/>
+            <ShopGameBox price={110000} percent={10} onShow={() => setShowProductModal(true)}/>
             <ShopGameBox discount={90000} price={110000}/>
-            <ShopGameBox discount={90000} price={110000} percent={10}/>
-            <ShopGameBox discount={90000} price={110000}/>
-            <ShopGameBox discount={90000} price={110000}/>
-            <ShopGameBox discount={90000} price={110000}/>
-            <ShopGameBox discount={90000} price={110000}/>
-            <ShopGameBox discount={90000} price={110000}/>
+            <ShopGameBox discount={90000} price={110000} percent={10} onShow={() => setShowProductModal(true)}/>
+            <ShopGameBox discount={90000} price={110000} onShow={() => setShowProductModal(true)}/>
+            <ShopGameBox discount={90000} price={110000} onShow={() => setShowProductModal(true)}/>
+            <ShopGameBox discount={90000} price={110000} onShow={() => setShowProductModal(true)}/>
+            <ShopGameBox discount={90000} price={110000} onShow={() => setShowProductModal(true)}/>
+            <ShopGameBox discount={90000} price={110000} onShow={() => setShowProductModal(true)}/>
           </div>
+          
           <div className="pagination-wrapper mt-16 flex flex-wrap items-center justify-center gap-8">
              <ArrowForwardIcon className="cursor-pointer"/>
              <Link to={'/products'} className="px-4 py-2 rounded-md transition-all delay-100">

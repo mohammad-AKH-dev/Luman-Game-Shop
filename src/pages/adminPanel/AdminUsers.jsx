@@ -11,8 +11,11 @@ export default function AdminUsers() {
       <div className="add-new-user__wrapper mt-12">
         <h2 className="add-new-user__title text-[26px] font-bold">اضافه کردن کاربر جدید</h2>
         <div className="inputs-wrapper grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 mt-12">
-            <div className="name-input__wrapper">
-                <FormInput type={'text'} title={'نام و نام خانوادگی'} required={true} placeholder={'رضا شکوهی...'}/>
+            <div className="first-name-input__wrapper">
+                <FormInput type={'text'} title={'نام '} required={true}/>
+            </div>
+            <div className="last-name-input__wrapper">
+                <FormInput type={'text'} title={' نام خانوادگی'} required={true} />
             </div>
             <div className="username-input__wrapper">
                 <FormInput type={'text'} title={'نام کاربری'} required={true}/>

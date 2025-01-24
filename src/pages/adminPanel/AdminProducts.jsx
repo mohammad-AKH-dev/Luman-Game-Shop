@@ -4,6 +4,8 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import UploadIcon from "@mui/icons-material/Upload";
 
 export default function AdminProducts() {
+  
+
   return (
     <>
       {/* add new product */}
@@ -50,7 +52,7 @@ export default function AdminProducts() {
 
         <div className="table-wrapper mt-8 mr-2">
           <h3 className="table-title text-[26px] font-bold text-right">
-            کاربران
+          محصولات
           </h3>
           <div className="table-div">
             <table className="hidden sm:table w-full border-collapse mx-auto bg-secondary rounded-xl mt-8">
