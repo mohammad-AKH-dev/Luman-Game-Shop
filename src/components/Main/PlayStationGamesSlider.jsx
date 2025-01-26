@@ -59,7 +59,7 @@ export default function PlayStationGamesSlider() {
             </defs>
           </svg>
         </div>
-        <SectionHeader title={"اکانت قانونی پلی استیشن"} />
+        <SectionHeader title={"اکانت قانونی پلی استیشن"} href={'/products/category/playstation'}/>
         <Swiper
           className="playstation-Games__wrapper mt-12"
           modules={[Autoplay, Pagination]}

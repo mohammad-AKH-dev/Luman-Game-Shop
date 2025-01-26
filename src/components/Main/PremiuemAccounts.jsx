@@ -54,7 +54,7 @@ export default function PremiuemAccounts() {
         </svg>
       </div>
       <div className="container">
-        <SectionHeader title={"خرید اکانت پرمیوم"} />
+        <SectionHeader title={"خرید اکانت پرمیوم"} href={'/products/category/premium'}/>
         <Swiper
           spaceBetween={30}
           modules={[Autoplay, Pagination]}

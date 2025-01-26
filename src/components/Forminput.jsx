@@ -1,17 +1,17 @@
 export default function FormInput({
-  title,
-  Change,
-  Value,
-  name,
   children,
   type,
+  title,
   style,
   inputStyle,
   labelMargin,
   required,
   placeholder,
-  accept
-}) {
+  accept,
+  register,
+})
+   
+{
   return (
     <>
       <label
@@ -28,13 +28,15 @@ export default function FormInput({
         } my-4 rounded-xl focus-within:border-[#ffffff59] border relative p-[6px] border-[#ffffff3b]`}
       >
         <input
+          {...register}
+          autoComplete="off"
           type={type}
           accept={accept && accept}
           placeholder={placeholder ? placeholder : ''}
           className={`input-form ${inputStyle ? inputStyle : ""} ${
             children ? "w-[90%]" : "w-full"
           } text-[14px]
-          bg-primary outline-none`}
+           outline-none bg-primary`}
         />
         {children}
       </div>
