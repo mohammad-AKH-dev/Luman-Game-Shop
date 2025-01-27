@@ -8,6 +8,7 @@ import { Typography } from "@mui/material";
 import Sidebar from "../components/Menu/Sidebar";
 import FormInput from "../components/Forminput";
 import { digitsEnToFa } from "@persian-tools/persian-tools";
+import MenusSidebar from "../components/Menu/MenusSidebar";
 
 
 
@@ -31,6 +32,7 @@ export default function Checkout() {
       <Topbar />
       <Navbar />
       <Sidebar/>
+      <MenusSidebar/>
       <div className="chekout__title bg-secondary p-8">
         <div className="chekout__breadcrumb container">
           <Breadcrumbs

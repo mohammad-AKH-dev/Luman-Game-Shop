@@ -11,6 +11,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Sidebar from "../components/Menu/Sidebar";
 import ProductModal from "../components/Box/ProductModal";
+import MenusSidebar from "../components/Menu/MenusSidebar";
 
 export default function Products() {
   const [showState, setShowState] = useState("all");
@@ -27,6 +28,7 @@ export default function Products() {
       <Topbar />
       <Navbar />
       <Sidebar/>
+      <MenusSidebar/>
       {
         showProductModal && <ProductModal price={110000} discount={90000} onClose={() => setShowProductModal(false)}/>
       }

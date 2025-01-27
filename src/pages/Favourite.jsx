@@ -8,6 +8,7 @@ import HeartBrokenIcon from "@mui/icons-material/HeartBroken";
 import ClearIcon from "@mui/icons-material/Clear";
 import ShopGameBox from "../components/Box/ShopGameBox";
 import Sidebar from "../components/Menu/Sidebar";
+import MenusSidebar from "../components/Menu/MenusSidebar";
 
 export default function Favourite() {
   const [favoriteGames, setFavoriteGames] = useState([]);
@@ -21,6 +22,7 @@ export default function Favourite() {
       <Topbar />
       <Navbar />
       <Sidebar/>
+      <MenusSidebar/>
       <ShopHeader title={"مورد علاقه ها"}>
         <div className="shop-sorting-title__wrapper flex items-center gap-2">
           <Link to={"/"}>صفحه اصلی</Link>

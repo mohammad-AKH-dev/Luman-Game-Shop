@@ -3,6 +3,7 @@ import Navbar from "../../components/Header/Navbar";
 import Topbar from "../../components/Header/Topbar";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import Sidebar from "../../components/Menu/Sidebar";
+import MenusSidebar from "../../components/Menu/MenusSidebar";
 
 
 export default function UserIndex() {
@@ -11,6 +12,7 @@ export default function UserIndex() {
       <Topbar />
       <Navbar />
       <Sidebar />
+      <MenusSidebar/>
       <section className="my-account__header bg-secondary">
         <div className="container text-center p-10">
           <h2 className="my-account-page__title text-[34px] font-bold mb-2">

@@ -18,6 +18,7 @@ import { useState } from "react";
 import RelatedProducts from "../components/RelatedProducts";
 import ReactImageZoom from "react-image-zoom";
 import Footer from "../components/Footer/Footer";
+import MenusSidebar from "../components/Menu/MenusSidebar";
 
 export default function MainProduct() {
   const [isChechked, setIsChecked] = useState(false);
@@ -46,6 +47,7 @@ export default function MainProduct() {
       <Topbar />
       <Navbar />
       <Sidebar />
+      <MenusSidebar/>
       <section className="main-product__section mt-24">
         <div className="container">
           <div

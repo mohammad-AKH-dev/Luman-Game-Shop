@@ -8,6 +8,7 @@ import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useEffect, useState } from "react";
 import FormInput from "../components/Forminput";
 import Sidebar from "../components/Menu/Sidebar";
+import MenusSidebar from "../components/Menu/MenusSidebar";
 
 export default function Account() {
   const [showLoginPassword, setShowLoginPassword] = useState(false);
@@ -59,6 +60,7 @@ export default function Account() {
       <Topbar />
       <Navbar />
       <Sidebar />
+      <MenusSidebar/>
       <div className="account-page__title-wrapper text-center bg-secondary p-8 mt-4 lg:mt-0">
         <h2 className="account-page__title text-[34px] font-bold mb-2">
           حساب کاربری

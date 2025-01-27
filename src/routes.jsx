@@ -18,6 +18,7 @@ import AdminProducts from "./pages/adminPanel/AdminProducts";
 import AdminDiscounts from "./pages/adminPanel/AdminDiscounts";
 import AdminCategories from "./pages/adminPanel/AdminCategories";
 import AdminDetailes from "./pages/adminPanel/AdminDetailes";
+import Articles from "./pages/Articles";
 
 const routes = [
     {path:'/',element:<Index />},
@@ -28,6 +29,7 @@ const routes = [
     {path:'/products/product/:productName',element: <MainProduct/> },
     {path:'/cart',element:<ShoppingBasket/>},
     {path:'/checkout',element:<Checkout/>},
+    {path:'/articles',element:<Articles/>},
     {path:'/panel',element: <UserIndex/>, children:[
         {path:'dashboard',element:<Dashboard/>},
         {path:'orders',element:<Orders/>},
