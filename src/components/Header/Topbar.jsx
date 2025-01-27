@@ -22,7 +22,7 @@ export default function Topbar() {
     <div className="Topbar bg-primary lg:p-5">
       <div className="Topbar-wrapper container flex items-center justify-between">
         <div className="block lg:hidden">
-          <MenuIcon className="cursor-pointer" />
+          <MenuIcon className="cursor-pointer" onClick={() => context.setShowMobileMenus(true)}/>
         </div>
         <div className="topbar-right__section flex items-center gap-5 lg:w-[50%]">
           <Link to={"/"} className="inline-block	max-w-[150px] lg:min-w-[160px]">
@@ -111,12 +111,12 @@ export default function Topbar() {
               )}
 
             </div>
-              {/* <div className="person-icon" onClick={() => context.handleShowSidebar()}>
+              <div className="person-icon" onClick={() => context.handleShowSidebar()}>
                 <PersonIcon className="text-2xl cursor-pointer" />
-              </div> */}
-              <Link to={'/a-panel/dashboard'} className="person-icon" >
+              </div>
+              {/* <Link to={'/a-panel/dashboard'} className="person-icon" >
                 <PersonIcon className="text-2xl cursor-pointer" />
-              </Link>
+              </Link> */}
           </div>
         </div>
       </div>

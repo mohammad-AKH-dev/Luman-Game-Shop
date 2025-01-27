@@ -14,12 +14,13 @@ export default function Account() {
   const {
     register: registerLogin,
     handleSubmit: handleSubmitLogin,
-    formState: { errors: loginErrors },
+    formState: { errors: loginErrors ,},
   } = useForm();
   const {
     register: registerRegister,
     handleSubmit: handleSubmitRegister,
     formState: { errors: registerErrors },
+    
   } = useForm();
   const [isRegisterButtonDisabled,setIsRegisterButtonDisabled] = useState(false)
   const [isLoginButtonDisabled,setIsLoginButtonDisabled] = useState(false)

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 export default function App() {
   const router = useRoutes(routes);
   const [showSidebar,setShowSidebar] = useState(false)
+  const [showMobileMenus,setShowMobileMenus] = useState(false)
 
   useEffect(() => {
      handleHideSidebar()
@@ -22,7 +23,9 @@ export default function App() {
   return <MyContext.Provider value={{
     showSidebar,
     handleShowSidebar,
-    handleHideSidebar
+    handleHideSidebar,
+    showMobileMenus,
+    setShowMobileMenus
   }}>
        {router}
   </MyContext.Provider>;

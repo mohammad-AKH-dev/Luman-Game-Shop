@@ -41,8 +41,8 @@ export default function Sidebar() {
           </div>
           <div className="form-Links flex flex-col mt-4 gap-4">
             <Link to={"/"} className="text-[14px]">گذرواژه خود را فراموش کرده اید؟</Link>
-            <Link to={"/"} className="text-[14px] pt-2 pb-3 px-6 rounded-3xl shadow-box hover:shadow-boxHover bg-purple 
-            w-fit flex items-center justify-center">ورود</Link>
+            <button type="submit" className="text-[14px] pt-2 pb-3 px-6 rounded-3xl shadow-box hover:shadow-boxHover bg-purple 
+            w-fit flex items-center justify-center">ورود</button>
           </div>
         </form>
         <div className="register-user__wrapper flex items-center justify-center flex-col gap-6 border-b border-b-[#ffffff3b] pb-8">

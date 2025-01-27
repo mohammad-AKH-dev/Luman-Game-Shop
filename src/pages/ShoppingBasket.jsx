@@ -15,6 +15,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import Sidebar from "../components/Menu/Sidebar";
 import ShoppingBasketCart from "../components/ShoppingBasketCart";
+import MenusSidebar from "../components/Menu/MenusSidebar";
 
 export default function ShoppingBasket() {
   
@@ -83,6 +84,7 @@ export default function ShoppingBasket() {
       <Topbar />
       <Navbar />
       <Sidebar />
+      <MenusSidebar/>
       <div className="shopping-basket__title bg-secondary p-8">
         <div className="shopping-basket__breadcrumb container">
           <Breadcrumbs
