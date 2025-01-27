@@ -10,6 +10,7 @@ export default function App() {
 
   useEffect(() => {
      handleHideSidebar()
+     window.scrollTo(0,0)
   },[window.location.pathname])
 
   const handleShowSidebar = () => {

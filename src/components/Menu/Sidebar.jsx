@@ -4,12 +4,25 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import FormInput from "../Forminput";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import MyContext from "../../contexts/context";
+import { useForm } from "react-hook-form";
 
 export default function Sidebar() {
   const [showPassword,setShowPassword] = useState(false)
   const context = useContext(MyContext)
+  const {register, handleSubmit, formState: {errors}} = useForm({
+    defaultValues: {
+      username: '',
+      password: '',
+      saveUser: false
+    }
+  })
+
+  const loginHandler = (data) => {
+    console.log(data)
+  }
+
 
   return (
     <div className={`sidebar-wrapper transition-all delay-500 duration-150  ${context.showSidebar? 'fixed' : 'none'} w-full backdrop-blur-sm backdrop-brightness-50 top-0 right-0 left-0  h-full z-40`}>
@@ -18,9 +31,37 @@ export default function Sidebar() {
           <h6 className="text-[20px] font-bold">ورود</h6>
           <CloseIcon className="text-[#777] cursor-pointer" onClick={() => context.handleHideSidebar()} />
         </div>
-        <form action="#" className={`login-form ${context.showSidebar ? 'opacity-100 visible' : 'opacity-0 invisible'} border-y border-y-[#ffffff3b] py-4 my-6`}>
-         <FormInput type={'text'} title={'نام کاربری یا ایمیل'}  required={true}/>
-         <FormInput type={!showPassword ? 'password' : 'text'} title={'گذرواژه'} required={true}>
+        <form action="#" onSubmit={handleSubmit(loginHandler)} className={`login-form ${context.showSidebar ? 'opacity-100 visible' : 'opacity-0 invisible'} border-y border-y-[#ffffff3b] py-4 my-6`}>
+         <FormInput type={'text'} register={{
+          ...register('username' , {
+            required: 'وارد کردن نام کاربری یا ایمیل ضروری است.',
+            minLength: {
+              value: 3,
+              message: 'نام کاربری یا ایمیل باید حداقل 3 کاراکتر داشته باشد.'
+            },
+            maxLength: {
+              value: 30,
+              message: 'نام کاربری یا ایمیل باید حداکثر 30 کاراکتر داشته باشد'
+            }
+          })
+         }} title={'نام کاربری یا ایمیل'}  required={true}/>
+          {
+           errors.username && <p className="text-[10px] -mt-3 mb-2 text-red-600">{errors.username.message}</p>
+          }
+
+         <FormInput register={{
+          ...register('password',{
+            required: ('وارد کردن رمز عبور ضروری است.'),
+            minLength: {
+              value: 8,
+              message: 'رمز عبور حداقل 8 کاراکتر باید داشته باشد.'
+            },
+            maxLength: {
+              value: 15,
+              message: 'رمزعبور حداکثر 15 کاراکتر باید داشته باشد.'
+            }
+          })
+         }} type={!showPassword ? 'password' : 'text'} title={'گذرواژه'} required={true}>
           {
             !showPassword ? (
               <>
@@ -35,8 +76,11 @@ export default function Sidebar() {
             )
           }
          </FormInput>
+         {
+          errors?.password && <p className="text-[10px] -mt-3 mb-2 text-red-600">{errors.password.message}</p>
+         }
           <div className="checkbox-btn__wrapper flex items-center gap-2">
-            <input type="checkbox" />
+            <input type="checkbox" {...register('saveUser')}/>
             <span className="text-[14px]">مرا به خاطر بسپار</span>
           </div>
           <div className="form-Links flex flex-col mt-4 gap-4">

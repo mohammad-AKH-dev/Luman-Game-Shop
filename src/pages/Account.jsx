@@ -16,13 +16,25 @@ export default function Account() {
     register: registerLogin,
     handleSubmit: handleSubmitLogin,
     formState: { errors: loginErrors ,},
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      username:'',
+      password: '',
+      saveUser: false
+    }
+  });
   const {
     register: registerRegister,
     handleSubmit: handleSubmitRegister,
     formState: { errors: registerErrors },
     
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      username: '',
+      email:'',
+      password:''
+    }
+  });
   const [isRegisterButtonDisabled,setIsRegisterButtonDisabled] = useState(false)
   const [isLoginButtonDisabled,setIsLoginButtonDisabled] = useState(false)
 
@@ -85,8 +97,7 @@ export default function Account() {
             title={"نام کاربری یا آدرس ایمیل"}
             inputStyle={"bg-secondary"}
             required={true}
-            register={{
-              ...registerLogin("username", {
+            register={{...registerLogin("username", {
                 required: "وارد کردن نام کاربری یا ایمیل ضروری است.",
                 minLength: {
                   value: 3,
