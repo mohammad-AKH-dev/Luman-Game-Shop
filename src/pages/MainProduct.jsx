@@ -19,16 +19,25 @@ import RelatedProducts from "../components/RelatedProducts";
 import ReactImageZoom from "react-image-zoom";
 import Footer from "../components/Footer/Footer";
 import MenusSidebar from "../components/Menu/MenusSidebar";
-
+import productImage from "/images/slider-games/spider-man.webp"
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 export default function MainProduct() {
   const [isChechked, setIsChecked] = useState(false);
+
+   const params = useParams()
+    
+      useEffect(() => {
+        document.title = 'محصول / اسپایدرمن'
+      },[params])
+    
 
   const props = {
     width:0,
     height:0,
     zoomPosition: "original",
     zoomWidth: 420,
-    img: "/images/slider-games/spider-man.webp",
+    img: productImage,
     style: {
       width: "100%",
       height: "100%",

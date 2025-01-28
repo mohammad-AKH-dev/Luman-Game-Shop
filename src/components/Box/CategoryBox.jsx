@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import categoryImage from '/images/category.png'
 
 export default function CategoryBox({ title, subtitle }) {
   return (
     <Link to={'/'}>
       <div className="category-box w-full flex justify-center items-center flex-col">
         <img
-          src="https://theme.fullwp.ir/luman/game/wp-content/uploads/2023/06/windows-150x150.png"
+          src={categoryImage}
           className="category-box__img max-w-[133px] max-h-[133px]"
         />
         <div className="category-box__infos mt-4 text-center">

@@ -8,6 +8,7 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import XIcon from "@mui/icons-material/X";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ClearIcon from "@mui/icons-material/Clear";
+import myModalImage from "/images/games/red dead2.webp"
 export default function ProductModal(props) {
   const { discount, title, price, onClose } = props;
 
@@ -15,20 +16,20 @@ export default function ProductModal(props) {
     <div className="product-modal__wrapper fixed backdrop-brightness-50 left-0 right-0 z-[9999] w-full h-screen top-0 backdrop-blur-sm">
       <div
         className="product-modal grid grid-cols-1 max-h-[500px] overflow-y-scroll md:overflow-auto 
-         [&::-webkit-scrollbar]:w-2
+         [&::-webkit-scrollbar]:w-1
                 [&::-webkit-scrollbar-track]:bg-primary
                 [&::-webkit-scrollbar-thumb]:bg-secondary  md:grid-cols-2 bg-primary
        rounded-xl min-w-[300px] md:w-[900px] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
       >
         <div
-          className="close-modal__icon absolute text-[#777] top-1 left-0 sm1:top-3 sm1:left-3 cursor-pointer hover:text-[#999] transition-all"
+          className="close-modal__icon absolute text-[#777] top-1 left-1 sm1:top-3 sm1:left-3 cursor-pointer hover:text-[#999] transition-all"
           onClick={() => onClose()}
         >
           <ClearIcon className="text-[20px] md:text-[29px]" />
         </div>
         <Link to={'/products/product/spider-man'} className="product-modal__right-section p-6">
           <img
-            src="/images/games/red dead2.webp"
+            src={myModalImage}
             alt="product"
             className="product-img object-cover rounded-md"
           />

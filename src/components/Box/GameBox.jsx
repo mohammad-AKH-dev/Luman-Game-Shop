@@ -1,11 +1,12 @@
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import { Link } from "react-router-dom";
+import myGameImage from '/images/slider-games/spider-man.webp'
 export default function GameBox({ title, price, discount }) {
   return (
     <Link to={"/products/product/spider-man"}>
       <div className="playstation-game__box rounded-2xl overflow-hidden relative w-full h-full max-h-[340px] max-w-[340px] mx-auto">
         <img
-          src="/images/slider-games/spider-man.webp"
+          src={myGameImage}
           className="w-full h-full object-cover playstation-game__img"
         />
         <div className="playstation-game__infos text-center absolute pt-[28px] pr-[10px] pb-[15px] pl-[10px] bg-[#151b2d85] backdrop-blur-md bottom-0 right-0 left-0">

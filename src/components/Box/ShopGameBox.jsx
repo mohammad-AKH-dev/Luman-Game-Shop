@@ -1,22 +1,29 @@
 import { digitsEnToFa } from "@persian-tools/persian-tools";
-import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Skeleton from "@mui/material/Skeleton";
 import BoxAction from "../BoxAction";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import myGameImage from "/images/games/red dead2.webp"
+import Skeleton from '@mui/material/Skeleton';
+import { useState } from "react";
 
 export default function ShopGameBox({ discount, price, percent, children , onShow}) {
+  const [isShowSkeleton,setIsShowSkeleton] = useState(true)
   return (
     <div className="Shop-Game-box relative mt-8 max-w-[400px] group">
       {children}
       
         <img
-          src="/images/games/red dead2.webp"
-          className="max-w-full rounded-md"
+          src={myGameImage}
+          className={`${!isShowSkeleton ? 'block max-w-full' : 'none w-0'} rounded-md`}
+          onLoad={() => setIsShowSkeleton(false)}
         />
+        {
+         isShowSkeleton && <Skeleton variant="rectangular" className="w-[274px] mb-2 rounded-xl h-[250px] bg-[#caa9a91c]" />
+        }
+        
       
       {percent ? (
         <div

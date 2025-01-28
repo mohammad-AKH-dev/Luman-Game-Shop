@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import ShoppingCartItem from "../Box/ShoppingCartItem";
 import MyContext from "../../contexts/context";
+import myLogo from '/images/logo.png'
 
 
 export default function Topbar() {
@@ -26,7 +27,7 @@ export default function Topbar() {
         </div>
         <div className="topbar-right__section flex items-center gap-5 lg:w-[50%]">
           <Link to={"/"} className="inline-block	max-w-[150px] lg:min-w-[160px]">
-            <img src="/images/logo.png" className="w-full" />
+            <img src={myLogo} className="w-full" />
           </Link>
           <form className="topbar-search__wrapper hidden lg:flex relative h-10 rounded-xl bg-secondary min-w-[75%]  items-center justify-center">
             <input

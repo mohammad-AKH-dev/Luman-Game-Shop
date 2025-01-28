@@ -16,8 +16,16 @@ import { digitsEnToFa } from "@persian-tools/persian-tools";
 import Sidebar from "../components/Menu/Sidebar";
 import ShoppingBasketCart from "../components/ShoppingBasketCart";
 import MenusSidebar from "../components/Menu/MenusSidebar";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function ShoppingBasket() {
+
+   const params = useParams()
+  
+    useEffect(() => {
+      document.title = 'سبد خرید'
+    },[params])
   
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({

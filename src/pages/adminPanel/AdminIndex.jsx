@@ -8,8 +8,18 @@ import CategoryIcon from "@mui/icons-material/Category";
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import SearchIcon from "@mui/icons-material/Search";
 import FormInput from "../../components/Forminput";
+import myLogo from "/images/logo.png"
+import myPersonImage from "/images/person-circle.svg"
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export default function AdminIndex() {
+
+   const params = useParams()
+  
+    useEffect(() => {
+      document.title = 'پنل ادمین'
+    },[params])
   return (
     <div className="admin-panel flex justify-between">
       {/* side bar */}
@@ -17,7 +27,7 @@ export default function AdminIndex() {
         <h3 className="admin-panel__title border-b border-b-[#333] pb-5">
           <Link to={"/"}>
             <img
-              src="/images/logo.png"
+              src={myLogo}
               className="max-w-[120px] sm1:max-w-[160px]"
               alt="لومان"
             />
@@ -107,7 +117,7 @@ export default function AdminIndex() {
           </div>
           <div className="admin-details__wrapper flex flex-col gap-y-3 xs2:gap-y-0 items-center gap-x-3 xs2:flex-row-reverse text-[#ffffff99]">
             <img
-              src="/images/person-circle.svg"
+              src={myPersonImage}
               className="bg-[#ffffff99] rounded-[10rem] object-cover max-w-[40px]"
             />
             <div className="admin-title text-center xs2:text-right">

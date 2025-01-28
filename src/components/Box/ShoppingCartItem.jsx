@@ -1,12 +1,13 @@
 import CloseIcon from '@mui/icons-material/Close';
 import { digitsEnToFa } from "@persian-tools/persian-tools";
+import myGameImage from "/images/games/Forza.webp"
 export default function ShoppingCartItem() {
   return (
     <div className="cart-item flex items-start py-[1.5rem] px-[1.5rem] justify-between">
       <div className="cart-item__right-section flex">
         <img
           className="w-[65px] h-[75px] object-cover"
-          src="/images/games/Forza.webp"
+          src={myGameImage}
         />
         <div className="cart-item__details pr-4 flex flex-col gap-3">
           <h4 className="cart-item__title font-bold">اسپایدرمن</h4>

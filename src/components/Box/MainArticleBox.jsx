@@ -1,12 +1,13 @@
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import { Link } from "react-router-dom";
+import myArticleImage from '/images/games/FreeFire.jpg'
 
 export default function MainArticleBox({href}) {
   return (
     <Link to={href}>
     <div className="Article-box  overflow-hidden">
       <img
-        src="https://theme.fullwp.ir/luman/game/wp-content/uploads/2023/06/b4.jpg"
+        src={myArticleImage}
         className="w-full rounded-md"
       />
       <div className="Article-box__infos mt-4 text-center">

@@ -4,9 +4,17 @@ import Topbar from "../../components/Header/Topbar";
 import { Link, NavLink, Outlet } from "react-router-dom";
 import Sidebar from "../../components/Menu/Sidebar";
 import MenusSidebar from "../../components/Menu/MenusSidebar";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 
 export default function UserIndex() {
+  const params = useParams()
+  
+    useEffect(() => {
+      document.title = 'پنل کاربری'
+    },[params])
+
   return (
     <>
       <Topbar />

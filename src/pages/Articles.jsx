@@ -7,8 +7,17 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Link } from "react-router-dom";
 import Sidebar from "../components/Menu/Sidebar";
 import MenusSidebar from "../components/Menu/MenusSidebar";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Articles() {
+
+   const params = useParams()
+  
+    useEffect(() => {
+      document.title = 'مقالات'
+    },[params])
+
   return (
     <>
       <Topbar/>

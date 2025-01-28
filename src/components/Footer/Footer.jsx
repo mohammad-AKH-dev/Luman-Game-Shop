@@ -3,8 +3,15 @@ import FooterInfoBox from "../Box/FooterInfoBox";
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import FooterLinks from "./FooterLinks";
 import FooterBox from "../Box/FooterBox";
-
-import headphone from "/images/Icons/location.png"
+import logoImage from '/images/logo.png'
+import logo2Image from "/images/icons/logo2.png"
+import headphone from "/images/icons/headphone.png"
+import locationImage from "/images/icons/location.png"
+import emailImage from "/images/icons/email-2.png"
+import instagramLogo from "/images/icons/INSTAGRAM.png"
+import whatsAppLogo from "/images/icons/WHATSAPP.png"
+import twitterLogo from "/images/icons/TWITTER.png"
+import youtubeLogo from "/images/icons/YOUTUBE.png"
  export default function Footer() {
   return (
     <footer className="Footer container rounded-xl mt-32 py-12 px-8 bg-secondary">
@@ -12,7 +19,7 @@ import headphone from "/images/Icons/location.png"
       <div className="Footer-items__wrapper w-full flex flex-wrap gap-3 sm1:hidden text-center sm1:text-right">
         <div className="Footer-contacts flex flex-col gap-5 mx-auto sm1:mx-0">
           <img
-            src="/images/logo.png"
+            src={logoImage}
             className="Footer-logo max-w-[190px] mx-auto sm1:mx-0 sm1:max-w-[137px]"
             alt="Footer"
           />
@@ -31,11 +38,11 @@ import headphone from "/images/Icons/location.png"
             />
             <FooterInfoBox
               title={"ایران - تهران - منطقه 1 - تجریش"}
-              img={"/images/Icons/location.png"}
+              img={locationImage}
             />
             <FooterInfoBox
               title={"info@example.com"}
-              img={"/images/Icons/email-2.png"}
+              img={emailImage}
             />
           </div>
         </div>
@@ -81,10 +88,10 @@ import headphone from "/images/Icons/location.png"
           </li>
         </FooterLinks>
         <FooterLinks title={"ما را دنبال کنید!"}>
-          <FooterBox title={"اینستاگرام"} img={"/images/Icons/INSTAGRAM.png"} />
-          <FooterBox title={"واتساپ"} img={"/images/Icons/WHATSAPP.png"} />
-          <FooterBox title={"توییتر"} img={"/images/Icons/TWITTER.png"} />
-          <FooterBox title={"یوتیوب"} img={"/images/Icons/YOUTUBE.png"} />
+          <FooterBox title={"اینستاگرام"} img={instagramLogo} />
+          <FooterBox title={"واتساپ"} img={whatsAppLogo} />
+          <FooterBox title={"توییتر"} img={twitterLogo} />
+          <FooterBox title={"یوتیوب"} img={youtubeLogo} />
         </FooterLinks>
         </div>
       </div>
@@ -92,7 +99,7 @@ import headphone from "/images/Icons/location.png"
        <div className="Footer-items__wrapper w-full hidden sm1:grid sm1:grid-cols-2 gap-8 xs2:grid-cols-3 lg:grid-cols-4 text-center sm1:text-right">
         <div className="Footer-contacts flex flex-col gap-5 mx-auto sm1:mx-0">
           <img
-            src="/images/logo.png"
+            src={logoImage}
             className="Footer-logo max-w-[190px] mx-auto sm1:mx-0 sm1:max-w-[137px]"
             alt="Footer"
           />
@@ -107,15 +114,15 @@ import headphone from "/images/Icons/location.png"
               title={`${digitsEnToFa(9119876543)} - ${digitsEnToFa(
                 9119876543
               )}`}
-              img={"/images/Icons/headphone.png"}
+              img={headphone}
             />
             <FooterInfoBox
               title={"ایران - تهران - منطقه 1 - تجریش"}
-              img={"/images/Icons/location.png"}
+              img={locationImage}
             />
             <FooterInfoBox
               title={"info@example.com"}
-              img={"/images/Icons/email-2.png"}
+              img={emailImage}
             />
           </div>
         </div>
@@ -161,10 +168,10 @@ import headphone from "/images/Icons/location.png"
           </li>
         </FooterLinks>
         <FooterLinks title={"ما را دنبال کنید!"} width={true} >
-          <FooterBox title={"اینستاگرام"} img={"/images/Icons/INSTAGRAM.png"} />
-          <FooterBox title={"واتساپ"} img={"/images/Icons/WHATSAPP.png"} />
-          <FooterBox title={"توییتر"} img={"/images/Icons/TWITTER.png"} />
-          <FooterBox title={"یوتیوب"} img={"/images/Icons/YOUTUBE.png"} />
+          <FooterBox title={"اینستاگرام"} img={instagramLogo} />
+          <FooterBox title={"واتساپ"} img={whatsAppLogo} />
+          <FooterBox title={"توییتر"} img={twitterLogo} />
+          <FooterBox title={"یوتیوب"} img={youtubeLogo} />
         </FooterLinks>
         
       </div>
@@ -175,7 +182,7 @@ import headphone from "/images/Icons/location.png"
         <div className="Footer-img__wrapper w-[150px]">
           <img
             className="Footer-logo w-[38px] mx-auto sm1:mx-0 h-[32px]"
-            src="/images/Icons/logo2.png"
+            src={logo2Image}
           />
         </div>
         <div className="Footer-copy__item text-[14px]">Copyright © 2023 fullwp.ir</div>

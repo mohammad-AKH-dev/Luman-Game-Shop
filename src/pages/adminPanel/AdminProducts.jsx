@@ -2,6 +2,7 @@ import FormInput from "../../components/Forminput";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import UploadIcon from "@mui/icons-material/Upload";
+import myImage from "/images/games/Forza.webp"
 
 export default function AdminProducts() {
   
@@ -69,7 +70,7 @@ export default function AdminProducts() {
               <tbody>
                 <tr className="text-center">
                   <td className="py-4 flex items-center justify-center">
-                    <img src="/images/games/Forza.webp" className="w-[50px] rounded-md" alt="" />
+                    <img src={myImage} className="w-[50px] rounded-md" alt="" />
                   </td>
                   <td className="py-4">فورزا هورایزن 5</td>
                   <td className="py-4">70,000 تومان</td>
@@ -105,7 +106,7 @@ export default function AdminProducts() {
               <div className="mobile-table__left-section text-center text-[#ffffff99]">
                 <ul className="mobile-table__list flex flex-col gap-y-8">
                   <li className="mobile-table__list-item mx-auto">
-                  <img src="/images/games/Forza.webp" className="w-[50px] rounded-md -mt-[1.5rem]" alt="" />
+                  <img src={myImage} className="w-[50px] rounded-md -mt-[1.5rem]" alt="" />
                   </li>
                   <li className="mobile-table__list-item ">فورزا هورایزن 5</li>
                   <li className="mobile-table__list-item ">70,000 تومان</li>
