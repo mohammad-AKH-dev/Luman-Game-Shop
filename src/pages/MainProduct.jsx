@@ -14,37 +14,25 @@ import Rating from "@mui/material/Rating";
 import { styled } from "@mui/material/styles";
 import { Star } from "@mui/icons-material";
 import FormInput from "../components/Forminput";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import RelatedProducts from "../components/RelatedProducts";
-import ReactImageZoom from "react-image-zoom";
 import Footer from "../components/Footer/Footer";
 import MenusSidebar from "../components/Menu/MenusSidebar";
-import productImage from "/images/slider-games/spider-man.webp"
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
+import { MyContext } from "../contexts/context";
 export default function MainProduct() {
   const [isChechked, setIsChecked] = useState(false);
+  const context = useContext(MyContext);
+  const params = useParams();
+  const mainProduct = context.products.find(
+    (product) => product.id === +params.id
+  );
 
-   const params = useParams()
-    
-      useEffect(() => {
-        document.title = 'محصول / اسپایدرمن'
-      },[params])
-    
 
-  const props = {
-    width:0,
-    height:0,
-    zoomPosition: "original",
-    zoomWidth: 420,
-    img: productImage,
-    style: {
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      borderRadius: '15px'
-    },
-  };
+  useEffect(() => {
+    document.title = "محصول / اسپایدرمن";
+  }, [params]);
 
   const StyledRating = styled(Rating)({
     "& .MuiRating-iconEmpty	": {
@@ -56,21 +44,45 @@ export default function MainProduct() {
       <Topbar />
       <Navbar />
       <Sidebar />
-      <MenusSidebar/>
+      <MenusSidebar />
       <section className="main-product__section mt-24">
         <div className="container">
           <div
             className="product-wrapper flex items-center justify-center text-center 
-          xs2:items-start xs2:justify-normal xs2:text-right flex-wrap xs2:flex-nowrap gap-x-8"
+          xs2:items-start xs2:justify-normal xs2:text-right  flex-wrap xs2:flex-nowrap gap-x-8"
           >
-            <div className="product-img__wrapper w-[420px] h-[420px]">
-              <ReactImageZoom {...props}/>
+            <div className="product-img__wrapper">
+              <img
+                src={mainProduct.path}
+                className="w-full h-full object-fill m-auto rounded-xl max-w-[420px] min-h-[370px] max-h-[370px] min-w-[420px]"
+              />
             </div>
             <div className="product-details mt-8 xs2:mt-0">
-              <h3 className="product-title font-bold text-[28px]">اسپایدرمن</h3>
-              <span className="product-price block mt-2 xs2:mt-8 text-[22px] text-purple">
-                {digitsEnToFa(110000)}تومان
-              </span>
+              <h3 className="product-title font-bold text-[28px]">
+                {mainProduct.name}
+              </h3>
+              <div className="price-wrapper">
+                {mainProduct.discount ? (
+                  <>
+                    <span className="product__price line-through text-[#bbbbbb] text-[20px]">
+                      {digitsEnToFa(mainProduct.price?.toLocaleString())}تومان
+                    </span>
+                    <span className="product__discount text-purple text-[20px] mr-4">
+                      {digitsEnToFa(
+                        (
+                          mainProduct.price -
+                          (mainProduct.price * mainProduct.discount) / 100
+                        ).toLocaleString()
+                      )}
+                      تومان
+                    </span>
+                  </>
+                ) : (
+                  <span className="product__price text-purple text-[20px]">
+                    {digitsEnToFa(mainProduct.price?.toLocaleString())}تومان
+                  </span>
+                )}
+              </div>
               <div className="product-add-delete__count-wrapper flex justify-center flex-wrap xs2:flex-nowrap items-center gap-4 mt-6">
                 <div className="cart-counter__controller flex items-center gap-2 text-center">
                   <span
@@ -129,7 +141,7 @@ export default function MainProduct() {
               <span className=" w-full lg:w-[170%] xl:w-[250%] block h-[1px] bg-[#7773] mt-4 "></span>
               <div className="product-category mt-4">
                 <span className="text-[#ffffff99] font-bold">دسته:</span>
-                <span className="text-[#777777]"> اکانت قانونی پلی استیشن</span>
+                <span className="text-[#777777]"> {mainProduct.category}</span>
               </div>
               <div className="socials-share mt-6 flex items-center gap-x-2">
                 <span className="font-bold text-[#ffffff99]">
@@ -188,8 +200,20 @@ export default function MainProduct() {
                 <textarea className="min-h-[190px] w-full mt-4 rounded-xl bg-secondary text-white p-2"></textarea>
               </div>
               <form action="#" className="user-comment__informations mt-2">
-                <FormInput title={"نام"}  type={'text'} required={true} style={'bg-secondary'} inputStyle={'bg-secondary'}/>
-                <FormInput title={"ایمیل"}  type={'email'} required={true} style={'bg-secondary'} inputStyle={'bg-secondary'}/>
+                <FormInput
+                  title={"نام"}
+                  type={"text"}
+                  required={true}
+                  style={"bg-secondary"}
+                  inputStyle={"bg-secondary"}
+                />
+                <FormInput
+                  title={"ایمیل"}
+                  type={"email"}
+                  required={true}
+                  style={"bg-secondary"}
+                  inputStyle={"bg-secondary"}
+                />
                 <div>
                   <input
                     type="checkbox"
@@ -219,7 +243,7 @@ export default function MainProduct() {
           <RelatedProducts />
         </div>
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 }

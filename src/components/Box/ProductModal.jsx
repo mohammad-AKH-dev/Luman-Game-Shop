@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { digitsEnToFa } from "@persian-tools/persian-tools";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
@@ -8,9 +8,8 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import XIcon from "@mui/icons-material/X";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import ClearIcon from "@mui/icons-material/Clear";
-import myModalImage from "/images/games/red dead2.webp"
 export default function ProductModal(props) {
-  const { discount, title, price, onClose } = props;
+  const { onClose , data } = props;
 
   return (
     <div className="product-modal__wrapper fixed backdrop-brightness-50 left-0 right-0 z-[9999] w-full h-screen top-0 backdrop-blur-sm">
@@ -27,33 +26,35 @@ export default function ProductModal(props) {
         >
           <ClearIcon className="text-[20px] md:text-[29px]" />
         </div>
-        <Link to={'/products/product/spider-man'} className="product-modal__right-section p-6">
+        <Link to={`/products/product/${data.id}`} className="product-modal__right-section p-6">
           <img
-            src={myModalImage}
+            src={data.path}
             alt="product"
-            className="product-img object-cover rounded-md"
+            className="product-img w-full max-w-[270px] min-w-[270px] max-h-[270px] min-h-[270px] 
+            lg:max-w-[320px] lg:min-w-[320px] lg:max-h-[320px] lg:min-h-[320px] m-auto
+             object-fill mt-4 lg:mt-0 rounded-md"
           />
         </Link>
         <div className="product-modal__left-section p-6">
-          <Link to={"/products/product/spider-man"} className="w-fit">
+          <Link to={`/products/product/${data.id}`} className="w-fit">
             <h3 className="product-title text-[20px]  sm1:text-[28px] font-bold">
-              Red Dead Redemption 2
+              {data.name}
             </h3>
           </Link>
           <div className="product-price__wrapper mt-5 flex flex-wrap">
-            {discount ? (
+            {data.discount ? (
               <>
                 <span className="shop-game__price line-through text-[#bbbbbb] text-[20px]">
-                  {digitsEnToFa(price?.toLocaleString())}تومان
+                  {digitsEnToFa(data.price?.toLocaleString())}تومان
                 </span>
                 <span className="shop-game__discount text-purple text-[20px] mr-4">
-                  {digitsEnToFa(discount?.toLocaleString())}تومان
+                  {digitsEnToFa((data.price - (data.price * data.discount / 100)).toLocaleString())}تومان
                 </span>
               </>
             ) : (
               <>
                 <span className="shop-game__price text-purple">
-                  {digitsEnToFa(price?.toLocaleString())}تومان
+                  {digitsEnToFa(data.price?.toLocaleString())}تومان
                 </span>
               </>
             )}
@@ -115,7 +116,7 @@ export default function ProductModal(props) {
           </div>
           <div className="product-category mt-6 border-t border-t-[#333] pt-6">
             <span className="text-[#ffffff99] font-bold">دسته:</span>
-            <span className="text-[#777777]"> اکانت قانونی پلی استیشن</span>
+            <span className="text-[#777777]"> {data.category}</span>
           </div>
           <div className="socials-share mt-6 flex items-center gap-x-2">
             <span className="font-bold text-[#ffffff99]">اشتراک گذاری:</span>

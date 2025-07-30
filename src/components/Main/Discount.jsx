@@ -5,7 +5,10 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import { digitsEnToFa } from "@persian-tools/persian-tools";
+import { useContext } from "react";
+import { MyContext } from "../../contexts/context";
 export default function Discount() {
+  const context = useContext(MyContext);
   return (
     <div className="discount-section w-full container bg-secondary py-9 px-6 flex flex-col lg:flex-row items-center justify-center rounded-2xl">
       <div className="w-[240px] discount-time__box">
@@ -63,24 +66,11 @@ export default function Discount() {
         }}
         loop
       >
-        <SwiperSlide>
-          <GameBox title={"اسپایدرمن"} price={70000} discount={50000} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <GameBox title={"اسپایدرمن"} price={70000} discount={50000} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <GameBox title={"اسپایدرمن"} price={70000} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <GameBox title={"اسپایدرمن"} price={70000} discount={50000} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <GameBox title={"اسپایدرمن"} price={70000} discount={50000} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <GameBox title={"اسپایدرمن"} price={70000} discount={50000} />
-        </SwiperSlide>
+        {context.products.slice(0, 10).map((product) => (
+          <SwiperSlide key={product.id}>
+            <GameBox {...product} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

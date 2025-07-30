@@ -4,9 +4,10 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import FormInput from "../Forminput";
-import { useContext, useEffect, useState } from "react";
-import MyContext from "../../contexts/context";
+import { useContext, useState } from "react";
+
 import { useForm } from "react-hook-form";
+import { MyContext } from "../../contexts/context";
 
 export default function Sidebar() {
   const [showPassword,setShowPassword] = useState(false)
@@ -20,18 +21,17 @@ export default function Sidebar() {
   })
 
   const loginHandler = (data) => {
-    console.log(data)
+    return data
   }
 
-
   return (
-    <div className={`sidebar-wrapper transition-all delay-500 duration-150  ${context.showSidebar? 'fixed' : 'none'} w-full backdrop-blur-sm backdrop-brightness-50 top-0 right-0 left-0  h-full z-40`}>
-      <div className={`form-sidebar h-full absolute top-0 transition-all duration-200 delay-0  ${context.showSidebar ? 'right-0' : '-right-[500px]'} bg-primary px-4 py-6`}>
+    <div className={`sidebar-wrapper transition-all delay-500 duration-150  ${context?.showSidebar? 'fixed' : 'none'} w-full backdrop-blur-sm backdrop-brightness-50 top-0 right-0 left-0  h-full z-40`}>
+      <div className={`form-sidebar h-full absolute top-0 transition-all duration-200 delay-0  ${context?.showSidebar ? 'right-0' : '-right-[500px]'} bg-primary px-4 py-6`}>
         <div className="form-sidebar__title flex items-center justify-between">
           <h6 className="text-[20px] font-bold">ورود</h6>
           <CloseIcon className="text-[#777] cursor-pointer" onClick={() => context.handleHideSidebar()} />
         </div>
-        <form action="#" onSubmit={handleSubmit(loginHandler)} className={`login-form ${context.showSidebar ? 'opacity-100 visible' : 'opacity-0 invisible'} border-y border-y-[#ffffff3b] py-4 my-6`}>
+        <form action="#" onSubmit={handleSubmit(loginHandler)} className={`login-form ${context?.showSidebar ? 'opacity-100 visible' : 'opacity-0 invisible'} border-y border-y-[#ffffff3b] py-4 my-6`}>
          <FormInput type={'text'} register={{
           ...register('username' , {
             required: 'وارد کردن نام کاربری یا ایمیل ضروری است.',

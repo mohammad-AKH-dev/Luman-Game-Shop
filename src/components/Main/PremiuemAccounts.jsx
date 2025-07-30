@@ -2,8 +2,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import SectionHeader from "../sectionHeader/SectionHeader";
 import GameBox from "../Box/GameBox";
+import { useContext } from "react";
+import { MyContext } from "../../contexts/context";
 
 export default function PremiuemAccounts() {
+  const context = useContext(MyContext);
   return (
     <section className="premium-accounts-section mt-[10rem] relative">
       <div className="bg-premuim__mask max-w-[670px] max-h-[670px] absolute left-0 top-[0] xs:top-[-10rem] ">
@@ -54,7 +57,10 @@ export default function PremiuemAccounts() {
         </svg>
       </div>
       <div className="container">
-        <SectionHeader title={"خرید اکانت پرمیوم"} href={'/products/category/premium'}/>
+        <SectionHeader
+          title={"خرید اکانت پرمیوم"}
+          href={"/products/1/?category=all"}
+        />
         <Swiper
           spaceBetween={30}
           modules={[Autoplay, Pagination]}
@@ -74,24 +80,11 @@ export default function PremiuemAccounts() {
           pagination
           loop
         >
-          <SwiperSlide>
-            <GameBox price={70000} discount={50000} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <GameBox price={70000} discount={50000} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <GameBox price={70000} discount={50000} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <GameBox price={70000} discount={50000} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <GameBox price={70000} discount={50000} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <GameBox price={70000} discount={50000} />
-          </SwiperSlide>
+          {context.products.slice(10, 25).map((product) => (
+            <SwiperSlide key={product.id}>
+              <GameBox {...product} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

@@ -22,11 +22,10 @@ import Articles from "./pages/Articles";
 
 const routes = [
     {path:'/',element:<Index />},
-    {path:'/products', element:<Products />},
-    {path:'/products/category/:categoryName',element:<Products/>},
+    {path:'/products/:page', element:<Products />},
     {path:'/favourites',element:<Favourite/>},
     {path:'/account',element:<Account/>},
-    {path:'/products/product/:productName',element: <MainProduct/> },
+    {path:'/products/product/:id',element: <MainProduct/> },
     {path:'/cart',element:<ShoppingBasket/>},
     {path:'/checkout',element:<Checkout/>},
     {path:'/articles',element:<Articles/>},

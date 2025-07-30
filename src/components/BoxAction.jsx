@@ -1,6 +1,6 @@
 import { useState } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
-export default function BoxAction({ children, title, onShow }) {
+export default function BoxAction({ children, title, onShow , onClick}) {
   const [isPending, setIsPending] = useState(false);
   return (
     <div
@@ -9,8 +9,9 @@ export default function BoxAction({ children, title, onShow }) {
         setIsPending(true)
         setTimeout(() => {
           onShow();
+          onClick()
           setIsPending(false)
-        }, [3000]);
+        }, [1000]);
       }}
       className="action w-[40px] h-[40px] cursor-pointer invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all 
          hover:scale-125 bg-secondary flex items-center justify-center rounded-3xl

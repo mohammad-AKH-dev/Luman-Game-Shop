@@ -41,7 +41,6 @@ export default function Account() {
   let params = useParams();
 
   const submitRegisterForm = (data) => {
-    console.log(data,registerErrors);
     if(data && !registerErrors.length){
       setIsRegisterButtonDisabled(true)
       alert('با موفقیت ثبت نام شدید')
@@ -52,7 +51,6 @@ export default function Account() {
   };
 
   const submitLoginForm = (data) => {
-    console.log(data);
     if(data && !loginErrors.length){
       setIsLoginButtonDisabled(true)
       alert('با موفقیت لاگین شدید')

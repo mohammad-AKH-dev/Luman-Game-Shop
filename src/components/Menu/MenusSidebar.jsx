@@ -2,17 +2,17 @@ import CloseIcon from "@mui/icons-material/Close";
 import SearchIcon from "@mui/icons-material/Search";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import MyContext from "../../contexts/context";
+import { MyContext } from "../../contexts/context";
 export default function MenusSidebar() {
   const [showWichDetails, setShowWichDetails] = useState("menu");
   const myContext = useContext(MyContext)
 
   return (
-    <div className={`laptop-menu__wrapper transition-all fixed  ${myContext.showMobileMenus ? 
+    <div className={`laptop-menu__wrapper transition-all fixed  ${myContext?.showMobileMenus ? 
       'backdrop-brightness-50 z-[99999] w-full h-full backdrop-blur-sm' : 'backdrop-brightness-100 -z-[9999] backdrop-blur-0'} 
       top-0 right-0`}>
 
-      <div className={`laptop-menu w-[300px] transition-all h-screen fixed ${myContext.showMobileMenus ? 'right-0' : '-right-[500px]'} top-0 bg-primary`}>
+      <div className={`laptop-menu w-[300px] transition-all h-screen fixed ${myContext?.showMobileMenus ? 'right-0' : '-right-[500px]'} top-0 bg-primary`}>
         <CloseIcon className="absolute left-3 top-3 cursor-pointer text-[#777] transition-all hover:text-[#999]" 
         onClick={() => myContext.setShowMobileMenus(false)} />
         <div

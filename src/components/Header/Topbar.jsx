@@ -10,14 +10,14 @@ import { digitsEnToFa } from "@persian-tools/persian-tools";
 import { Link } from "react-router-dom";
 import { useContext, useState } from "react";
 import ShoppingCartItem from "../Box/ShoppingCartItem";
-import MyContext from "../../contexts/context";
 import myLogo from '/images/logo.png'
+import { MyContext } from "../../contexts/context";
 
 
 export default function Topbar() {
   const [shoppingBasket, setShoppingBasket] = useState([2]);
   const context = useContext(MyContext)
- 
+
 
   return (
     <div className="Topbar bg-primary lg:p-5">
@@ -47,7 +47,7 @@ export default function Topbar() {
         </div>
         <div className="topbar-left__section flex lg:w-[50%] justify-end">
           <div className="menus hidden lg:flex items-center justify-center gap-4 ml-10">
-            <Menu title={"محصولات"} href={"/products"}>
+            <Menu title={"محصولات"} href={"/products/1/?category=all"}>
               <WorkOutlineIcon className="text-purple cursor-pointer" />
             </Menu>
             <Menu title={"مورد علاقه ها"} href={"/favourites"}>
