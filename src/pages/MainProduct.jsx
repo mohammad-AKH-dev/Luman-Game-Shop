@@ -54,7 +54,7 @@ export default function MainProduct() {
             <div className="product-img__wrapper">
               <img
                 src={mainProduct.path}
-                className="w-full h-full object-fill m-auto rounded-xl max-w-[420px] min-h-[370px] max-h-[370px] min-w-[420px]"
+                className="w-full h-full object-fill m-auto rounded-xl max-w-[420px] min-h-[370px] max-h-[370px] sm1:min-w-[420px]"
               />
             </div>
             <div className="product-details mt-8 xs2:mt-0">

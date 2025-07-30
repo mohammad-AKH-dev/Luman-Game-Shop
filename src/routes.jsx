@@ -1,7 +1,6 @@
 import Index from "./pages"
 import Account from "./pages/Account"
 import Favourite from "./pages/Favourite"
-import Products from "./pages/Products";
 import MainProduct from './pages/MainProduct'
 import UserIndex from "./pages/userPanel/UserIndex";
 import Dashboard from "./pages/userPanel/Dashboard";
@@ -19,6 +18,7 @@ import AdminDiscounts from "./pages/adminPanel/AdminDiscounts";
 import AdminCategories from "./pages/adminPanel/AdminCategories";
 import AdminDetailes from "./pages/adminPanel/AdminDetailes";
 import Articles from "./pages/Articles";
+import Products from "./pages/Products";
 
 const routes = [
     {path:'/',element:<Index />},

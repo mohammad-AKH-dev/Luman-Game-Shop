@@ -1,5 +1,46 @@
 import { createContext, useState } from "react";
 import PropTypes from "prop-types";
+import RedDeadPath from '/images/games/red dead2.webp'
+import LastOfUsPath from "/images/games/last-of-us.jfif"
+import dota2Path from "/images/games/dota-2.jpg"
+import assassinCreedPath from  "/images/games/Assassins-Creed.jpg"
+import residentEvil4Path from "/images/games/resident-evil-4.jpg"
+import witcher3Path from "/images/games/witcher-3.jpg"
+import eldenRingPath from "/images/games/elden-ring.jfif"
+import elderScrollsPath from "/images/games/elder-scrolls.jfif"
+import monsetHunterPath from "/images/games/monster-hunter.jfif"
+import southOfMidNight from "/images/games/south-of-midnight.jfif"
+import godOfWarRagnarok from "/images/games/ragnarok.jfif"
+import gtaVPath from "/images/games/gta-v.jfif"
+import darkAgesPath from "/images/games/doom.jpg"
+import assasinsCreedShadowPath from "/images/games/Assassins-Creed-shadows.jfif"
+import hitman3Path from "/images/games/hitman-3.jfif"
+import spiderMan2Path from  "/images/slider-games/spider-man.webp"
+import horizonForbiddenPath from "/images/games/horizon-forbidden.jfif"
+import granTurismoPath from "/images/games/gran-turismo.jfif"
+import bloodBornPath from "/images/games/Bloodborne.jfif"
+import uncharted4Path from "/images/games/uncharted-4.jfif"
+import theLastGuardianPath from "/images/games/last-guardian.jfif"
+import ghostOfTsushimaPath from "/images/games/ghost-of-tsushima.jfif"
+import deathStrandingPath from "/images/games/death-stranding.jpg"
+import demonsSoulsRemakePath from "/images/games/demons-souls.jfif"
+import cyberpankPath from "/images/games/cyberpunk-2077.jfif"
+import baldursGatePath from "/images/games/baldur's-gate.jfif"
+import hades2Path from "/images/games/hades-2.jfif"
+import starfild2Path from "/images/games/starfield.jfif"
+import sekiroPath from "/images/games/sekiro.jfif"
+import controlPath from "/images/games/control.jfif"
+import halfLifePath from "/images/games/half-life.jfif"
+import hollowKnightPath from "/images/games/silksong.jfif"
+import alanWaks2Path from "/images/games/alan-wake-2.jfif"
+import fablePath from "/images/games/fable.jfif"
+import avowedPath from "/images/games/avowed.jfif"
+import perfectDarkPath from "/images/games/perfect-dark.jfif"
+import forzaHorizonPath from "/images/games/Forza.webp"
+import gears5Path from "/images/games/Gears-5.jfif"
+import haloInfinitePath from "/images/games/halo-infinite.jfif"
+import stateOfDecay3Path from "/images/games/state-of-decay-3.jfif"
+
 
 export const MyContext = createContext(null);
 
@@ -13,7 +54,7 @@ export default function ContextProvider({ children }) {
       price: 110000,
       discount: 10,
       category: "PlayStation",
-      path: "/images/games/red dead2.webp",
+      path: RedDeadPath,
     },
     {
       id: 2,
@@ -21,7 +62,7 @@ export default function ContextProvider({ children }) {
       price: 70000,
       discount: 20,
       category: "PlayStation",
-      path: "/images/games/last-of-us.jfif",
+      path: LastOfUsPath,
     },
     {
       id: 3,
@@ -29,7 +70,7 @@ export default function ContextProvider({ children }) {
       price: 90000,
       discount: 0,
       category: "Steam",
-      path: "/images/games/dota-2.jpg",
+      path: dota2Path,
     },
     {
       id: 4,
@@ -37,7 +78,7 @@ export default function ContextProvider({ children }) {
       price: 120000,
       discount: 10,
       category: "Steam",
-      path: "/images/games/Assassins-Creed.jpg",
+      path: assassinCreedPath,
     },
     {
       id: 5,
@@ -45,7 +86,7 @@ export default function ContextProvider({ children }) {
       price: 140000,
       discount: 20,
       category: "Steam",
-      path: "/images/games/resident-evil-4.jpg",
+      path: residentEvil4Path,
     },
     {
       id: 6,
@@ -53,7 +94,7 @@ export default function ContextProvider({ children }) {
       price: 150000,
       discount: 15,
       category: "Steam",
-      path: "/images/games/witcher-3.jpg",
+      path: witcher3Path,
     },
     {
       id: 7,
@@ -61,7 +102,7 @@ export default function ContextProvider({ children }) {
       price: 300000,
       discount: 20,
       category: "Xbox",
-      path: "/images/games/elden-ring.jfif",
+      path: eldenRingPath,
     },
     {
       id: 8,
@@ -69,7 +110,7 @@ export default function ContextProvider({ children }) {
       price: 400000,
       discount: 30,
       category: "Xbox",
-      path: "/images/games/elder-scrolls.jfif",
+      path: elderScrollsPath,
     },
     {
       id: 9,
@@ -77,7 +118,7 @@ export default function ContextProvider({ children }) {
       price: 200000,
       discount: 10,
       category: "Xbox",
-      path: "/images/games/monster-hunter.jfif",
+      path: monsetHunterPath,
     },
     {
       id: 10,
@@ -85,7 +126,7 @@ export default function ContextProvider({ children }) {
       price: 150000,
       discount: 5,
       category: "Xbox",
-      path: "/images/games/south-of-midnight.jfif",
+      path: southOfMidNight,
     },
     {
       id: 11,
@@ -93,7 +134,7 @@ export default function ContextProvider({ children }) {
       price: 230000,
       discount: 5,
       category: "Steam",
-      path: "/images/games/ragnarok.jfif",
+      path: godOfWarRagnarok,
     },
     {
       id: 12,
@@ -101,7 +142,7 @@ export default function ContextProvider({ children }) {
       price: 500000,
       discount: 10,
       category: "PlayStation",
-      path: "/images/games/gta-v.jfif",
+      path: gtaVPath,
     },
     {
       id: 13,
@@ -109,7 +150,7 @@ export default function ContextProvider({ children }) {
       price: 350000,
       discount: 0,
       category: "Steam",
-      path: "/images/games/doom.jpg",
+      path: darkAgesPath,
     },
     {
       id: 14,
@@ -117,7 +158,7 @@ export default function ContextProvider({ children }) {
       price: 150000,
       discount: 10,
       category: "Steam",
-      path: "/images/games/Assassins-Creed-shadows.jfif",
+      path: assasinsCreedShadowPath,
     },
     {
       id: 15,
@@ -125,7 +166,7 @@ export default function ContextProvider({ children }) {
       price: 200000,
       discount: 10,
       category: "Steam",
-      path: "/images/games/hitman-3.jfif",
+      path: hitman3Path,
     },
 
     // 🎮 جدید - PlayStation
@@ -135,7 +176,7 @@ export default function ContextProvider({ children }) {
       price: 300000,
       discount: 10,
       category: "PlayStation",
-      path: "/images/slider-games/spider-man.webp",
+      path: spiderMan2Path,
     },
     {
       id: 17,
@@ -143,7 +184,7 @@ export default function ContextProvider({ children }) {
       price: 280000,
       discount: 15,
       category: "PlayStation",
-      path: "/images/games/horizon-forbidden.jfif",
+      path: horizonForbiddenPath
     },
     {
       id: 18,
@@ -151,7 +192,7 @@ export default function ContextProvider({ children }) {
       price: 260000,
       discount: 5,
       category: "PlayStation",
-      path: "/images/games/gran-turismo.jfif",
+      path: granTurismoPath,
     },
     {
       id: 19,
@@ -159,7 +200,7 @@ export default function ContextProvider({ children }) {
       price: 150000,
       discount: 20,
       category: "PlayStation",
-      path: "/images/games/Bloodborne.jfif",
+      path: bloodBornPath,
     },
     {
       id: 20,
@@ -167,7 +208,7 @@ export default function ContextProvider({ children }) {
       price: 120000,
       discount: 15,
       category: "PlayStation",
-      path: "/images/games/uncharted-4.jfif",
+      path: uncharted4Path,
     },
     {
       id: 21,
@@ -175,7 +216,7 @@ export default function ContextProvider({ children }) {
       price: 100000,
       discount: 5,
       category: "PlayStation",
-      path: "/images/games/last-guardian.jfif",
+      path: theLastGuardianPath,
     },
     {
       id: 22,
@@ -183,7 +224,7 @@ export default function ContextProvider({ children }) {
       price: 270000,
       discount: 10,
       category: "PlayStation",
-      path: "/images/games/ghost-of-tsushima.jfif",
+      path: ghostOfTsushimaPath,
     },
     {
       id: 23,
@@ -191,7 +232,7 @@ export default function ContextProvider({ children }) {
       price: 200000,
       discount: 20,
       category: "PlayStation",
-      path: "/images/games/death-stranding.jpg",
+      path: deathStrandingPath,
     },
     {
       id: 24,
@@ -199,7 +240,7 @@ export default function ContextProvider({ children }) {
       price: 310000,
       discount: 10,
       category: "PlayStation",
-      path: "/images/games/demons-souls.jfif",
+      path: demonsSoulsRemakePath,
     },
 
     // 🎮 جدید - Steam
@@ -209,7 +250,7 @@ export default function ContextProvider({ children }) {
       price: 300000,
       discount: 15,
       category: "Steam",
-      path: "/images/games/cyberpunk-2077.jfif",
+      path: cyberpankPath,
     },
     {
       id: 26,
@@ -217,7 +258,7 @@ export default function ContextProvider({ children }) {
       price: 350000,
       discount: 10,
       category: "Steam",
-      path: "/images/games/baldur's-gate.jfif",
+      path: baldursGatePath,
     },
     {
       id: 27,
@@ -225,7 +266,7 @@ export default function ContextProvider({ children }) {
       price: 180000,
       discount: 5,
       category: "Steam",
-      path: "/images/games/hades-2.jfif",
+      path: hades2Path,
     },
     {
       id: 28,
@@ -233,7 +274,7 @@ export default function ContextProvider({ children }) {
       price: 400000,
       discount: 10,
       category: "Steam",
-      path: "/images/games/starfield.jfif",
+      path: starfild2Path,
     },
     {
       id: 29,
@@ -241,7 +282,7 @@ export default function ContextProvider({ children }) {
       price: 200000,
       discount: 15,
       category: "Steam",
-      path: "/images/games/sekiro.jfif",
+      path: sekiroPath,
     },
     {
       id: 30,
@@ -249,7 +290,7 @@ export default function ContextProvider({ children }) {
       price: 150000,
       discount: 20,
       category: "Steam",
-      path: "/images/games/control.jfif",
+      path: controlPath,
     },
     {
       id: 31,
@@ -257,7 +298,7 @@ export default function ContextProvider({ children }) {
       price: 250000,
       discount: 10,
       category: "Steam",
-      path: "/images/games/half-life.jfif",
+      path: halfLifePath,
     },
     {
       id: 32,
@@ -265,7 +306,7 @@ export default function ContextProvider({ children }) {
       price: 140000,
       discount: 5,
       category: "Steam",
-      path: "/images/games/silksong.jfif",
+      path: hollowKnightPath,
     },
     {
       id: 33,
@@ -273,7 +314,7 @@ export default function ContextProvider({ children }) {
       price: 320000,
       discount: 15,
       category: "Steam",
-      path: "/images/games/alan-wake-2.jfif",
+      path: alanWaks2Path,
     },
 
     // 🎮 جدید - Xbox
@@ -283,7 +324,7 @@ export default function ContextProvider({ children }) {
       price: 300000,
       discount: 10,
       category: "Xbox",
-      path: "/images/games/fable.jfif",
+      path: fablePath,
     },
     {
       id: 35,
@@ -291,7 +332,7 @@ export default function ContextProvider({ children }) {
       price: 280000,
       discount: 15,
       category: "Xbox",
-      path: "/images/games/avowed.jfif",
+      path: avowedPath,
     },
     {
       id: 36,
@@ -299,7 +340,7 @@ export default function ContextProvider({ children }) {
       price: 260000,
       discount: 5,
       category: "Xbox",
-      path: "/images/games/perfect-dark.jfif",
+      path: perfectDarkPath,
     },
     {
       id: 37,
@@ -307,7 +348,7 @@ export default function ContextProvider({ children }) {
       price: 320000,
       discount: 10,
       category: "Xbox",
-      path: "/images/games/Forza.webp",
+      path: forzaHorizonPath,
     },
     {
       id: 38,
@@ -315,7 +356,7 @@ export default function ContextProvider({ children }) {
       price: 200000,
       discount: 20,
       category: "Xbox",
-      path: "/images/games/Gears-5.jfif",
+      path: gears5Path,
     },
     {
       id: 39,
@@ -323,7 +364,7 @@ export default function ContextProvider({ children }) {
       price: 250000,
       discount: 15,
       category: "Xbox",
-      path: "/images/games/halo-infinite.jfif",
+      path: haloInfinitePath,
     },
     {
       id: 40,
@@ -331,7 +372,7 @@ export default function ContextProvider({ children }) {
       price: 280000,
       discount: 10,
       category: "Xbox",
-      path: "/images/games/state-of-decay-3.jfif",
+      path: stateOfDecay3Path,
     },
   ]);
 
