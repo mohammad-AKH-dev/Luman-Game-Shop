@@ -15,7 +15,7 @@ export default function ShopGameBox(props) {
     <div className="Shop-Game-box relative mt-8 max-w-[400px] group">
         <img
           src={path}
-          className={`${!isShowSkeleton ? 'block max-w-full' : 'none w-0'} rounded-md object-fill 
+          className={`${!isShowSkeleton ? 'block ' : 'none w-0'} rounded-md object-fill 
           2xl:min-w-[320px] 2xl:max-w-[320px] 2xl:min-h-[320px] 2xl:max-h-[320px]
            xl:min-w-[260px] xl:max-w-[260px] xl:min-h-[260px] xl:max-h-[260px] 
            lg:min-w-[230px] lg:max-w-[230px] lg:min-h-[230px] lg:max-h-[230px]
